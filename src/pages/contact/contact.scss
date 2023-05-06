@@ -79,7 +79,7 @@
 	}
 
 	&__maps {
-		min-height: 400px;
+		min-height: 500px;
 		margin-top: 50px;
 		margin-bottom: 50px;
 		position: relative;
@@ -118,6 +118,14 @@
 		flex-direction: row;
 		align-items: center;
 		gap: 20px;
+
+		a {
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
 	}
 
 	&__body {
