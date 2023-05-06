@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"><meta content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kamchatka Chalet</title>
+    <link rel="icon" href="img/favicon.svg">
+    <link rel="stylesheet" href="css/base.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/vendor.css">
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <div class="nav__bg" style="display: none"></div>
+      <div class="container"><img class="nav__logo" id="nav-logo" src="img/logo.svg" alt="logo">
+        <div class="nav__burger" id="nav-burger">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="nav__contact"><a href="tel:+79140202121">+7 914 020 2121</a>
+          <button class="button"><span class="gradient-text">Забронировать</span></button>
+        </div>
+      </div>
+      <div class="nav__menu" style="display: none">
+        <div class="nav__menu-list">
+          <p class="nav__menu-item nav-item">Об отеле</p>
+          <p class="nav__menu-item nav-item">проживание</p>
+          <p class="nav__menu-item nav-item">Ресторан</p>
+          <p class="nav__menu-item nav-item">Услуги</p>
+          <p class="nav__menu-item nav-item">Туры</p>
+          <p class="nav__menu-item nav-item">Контакты</p>
+        </div>
+      </div>
+    </nav>
+    <div class="container"> 
+      <section class="rooms">
+        <div class="breadcrumb">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="Главная">Главная</a></li>
+            <li class="breadcrumb__item"><span class="breadcrumb__link-current">Проживание</span></li>
+          </ul>
+        </div>
+        <div class="rooms__head">
+          <h1 class="rooms__title">Проживание</h1>
+          <div class="rooms__filters">
+            <button class="rooms__filter _active" type="button" data-filter="all">Все</button>
+            <button class="rooms__filter" type="button" data-filter="number">Номера</button>
+            <button class="rooms__filter" type="button" data-filter="chalet">Шале</button>
+          </div>
+        </div>
+        <div class="room" data-filter="number">
+          <div class="room__grid">
+            <div class="room__photo">
+              <picture>
+                <source type="image/webp" srcset="img/r-1.webp"/><img alt="" src="img/r-1.jpg"/>
+              </picture><a class="room__plus" href="#"></a>
+            </div>
+            <div class="room__content">
+              <div class="room__title">STANDARD</div>
+              <div class="room__desc"> 
+                <p>Этот светлый, изысканный и компактный номер обладает всем необходимым для релакса после увлекательно проведённого дня на Камчатке.</p>
+              </div>
+              <ul class="room__parametrs"> 
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Площадь номера</div>
+                  <div class="room__parametr-content">20 м<sup>2</sup></div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Вместимость</div>
+                  <div class="room__parametr-content">2 человека</div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Удобства</div>
+                  <div class="room__parametr-content">Двуспальная кровать <br>QUEEN SIZE 160х200</div>
+                </li>
+              </ul>
+              <div class="room__btns"><a class="room__book" href="#"> Забронировать </a><a class="room__link" href="#">Подробнее о номере</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="room" data-filter="number">
+          <div class="room__grid">
+            <div class="room__photo">
+              <picture>
+                <source type="image/webp" srcset="img/r-2.webp"/><img alt="" src="img/r-2.jpg"/>
+              </picture><a class="room__plus" href="#"></a>
+            </div>
+            <div class="room__content">
+              <div class="room__title">COMFORT</div>
+              <div class="room__desc"> 
+                <p>Удобный однокомнатный номер для двоих. Приятный интерьер с яркими акцентами и увеличенная площадь номера создадут для вас уют и комфорт после камчатских приключений.</p>
+              </div>
+              <ul class="room__parametrs"> 
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Площадь номера</div>
+                  <div class="room__parametr-content">26 м<sup>2</sup></div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Вместимость</div>
+                  <div class="room__parametr-content">2 человека</div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Удобства</div>
+                  <div class="room__parametr-content">Двуспальная кровать <br>KING SIZE 180х200</div>
+                </li>
+              </ul>
+              <div class="room__btns"><a class="room__book" href="#"> Забронировать </a><a class="room__link" href="#">Подробнее о номере</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="room" data-filter="number">
+          <div class="room__grid">
+            <div class="room__photo">
+              <picture>
+                <source type="image/webp" srcset="img/r-3.webp"/><img alt="" src="img/r-3.jpg"/>
+              </picture><a class="room__plus" href="#"></a>
+            </div>
+            <div class="room__content">
+              <div class="room__title">JUNIOR</div>
+              <div class="room__desc"> 
+                <p>Номер категории Джуниор предлагает исключительный комфорт для каждого гостя.</p>
+              </div>
+              <ul class="room__parametrs"> 
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Площадь номера</div>
+                  <div class="room__parametr-content">34 м<sup>2</sup></div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Вместимость</div>
+                  <div class="room__parametr-content">1 человек</div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Удобства</div>
+                  <div class="room__parametr-content">Двуспальная кровать <br>KING SIZE 180х200</div>
+                </li>
+              </ul>
+              <div class="room__btns"><a class="room__book" href="#"> Забронировать </a><a class="room__link" href="#">Подробнее о номере</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="room" data-filter="number">
+          <div class="room__grid">
+            <div class="room__photo">
+              <picture>
+                <source type="image/webp" srcset="img/r-4.webp"/><img alt="" src="img/r-4.jpg"/>
+              </picture><a class="room__plus" href="#"></a>
+            </div>
+            <div class="room__content">
+              <div class="room__title">JUNIOR SUITE</div>
+              <div class="room__desc"> 
+                <p>Прекрасный вариант для длительной поездки  на Камчатку: просторный номер объединил  в себе пространство для отдыха и вместительную гардеробную комнату.</p>
+              </div>
+              <ul class="room__parametrs"> 
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Площадь номера</div>
+                  <div class="room__parametr-content">39 м<sup>2</sup></div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Вместимость</div>
+                  <div class="room__parametr-content">3 человека</div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Удобства</div>
+                  <div class="room__parametr-content">Двуспальная кровать <br>EURO 200х200</div>
+                </li>
+              </ul>
+              <div class="room__btns"><a class="room__book" href="#"> Забронировать </a><a class="room__link" href="#">Подробнее о номере</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="room" data-filter="number">
+          <div class="room__grid">
+            <div class="room__photo">
+              <picture>
+                <source type="image/webp" srcset="img/r-5.webp"/><img alt="" src="img/r-5.jpg"/>
+              </picture><a class="room__plus" href="#"></a>
+            </div>
+            <div class="room__content">
+              <div class="room__title">DELUXE</div>
+              <div class="room__desc"> 
+                <p>Номера категории Deluxe с лаконичным, современным дизайном, располагают просторной гостиной и отдельной спальней.</p>
+              </div>
+              <ul class="room__parametrs"> 
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Площадь номера</div>
+                  <div class="room__parametr-content">34 м<sup>2</sup></div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Вместимость</div>
+                  <div class="room__parametr-content">1 человек</div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Удобства</div>
+                  <div class="room__parametr-content">Двуспальная кровать <br>KING SIZE 180х200</div>
+                </li>
+              </ul>
+              <div class="room__btns"><a class="room__book" href="#"> Забронировать </a><a class="room__link" href="#">Подробнее о номере</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="room" data-filter="chalet">
+          <div class="room__grid">
+            <div class="room__photo">
+              <picture>
+                <source type="image/webp" srcset="img/r-6.webp"/><img alt="" src="img/r-6.jpg"/>
+              </picture><a class="room__plus" href="#"></a>
+            </div>
+            <div class="room__content">
+              <div class="room__title">CHALET</div>
+              <div class="room__desc"> 
+                <p>100 квадратных метров общего пространства с дизайном в стиле альпийский деревни на берегу реки Карымшина, с собственным термальным бассейном и шикарным видом на Вилючинский вулкан.</p>
+              </div>
+              <ul class="room__parametrs"> 
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Площадь номера</div>
+                  <div class="room__parametr-content">100 м<sup>2</sup></div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Вместимость</div>
+                  <div class="room__parametr-content">2 комнаты</div>
+                </li>
+                <li class="room__parametr">
+                  <div class="room__parametr-title">Удобства</div>
+                  <div class="room__parametr-content">Двуспальная кровать <br>KING SIZE 180х200</div>
+                </li>
+              </ul>
+              <div class="room__btns"><a class="room__book" href="#"> Забронировать </a><a class="room__link" href="#">Подробнее о номере</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="footer">
+      <div class="container">
+        <hr>
+        <div class="contact-box">
+          <div class="footer__logo-box"><img src="img/logo.svg" alt="logo">
+            <p>Первый в истории Камчатки пятизвездочный отель</p>
+          </div>
+          <div class="footer__nav-box">
+            <p class="nav-item">Об отеле</p>
+            <p class="nav-item">Номерной фонд</p>
+            <p class="nav-item">Ресторан</p>
+            <p class="nav-item">Услуги</p>
+            <p class="nav-item">Туры</p>
+            <p class="nav-item">Контакты</p>
+          </div>
+          <div class="footer__address-box"><a href="tel:+79140202121">+7 914 020 2121</a><a href="mailto:info@kamchatkachalet.ru">info@kamchatkachalet.ru</a><a href="https://yandex.ru/maps/-/CCU8BFQddD" target="_blank">Камчатский край, Паратунка, ул. Речная, 7</a></div>
+        </div>
+        <hr>
+        <div class="footer__meta-box">
+          <p>© 2022 ООО "Шале"</p>
+          <div class="creator-box">
+            <p>создание сайтов —</p><img src="img/logo_ct.svg" alt="logo ct" /> 
+          </div>
+        </div>
+      </div>
+    </section><script src="https://api-maps.yandex.ru/2.1/?apikey=99ec229a-463e-41f0-9fcb-238e13fd628c&lang=ru_RU" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

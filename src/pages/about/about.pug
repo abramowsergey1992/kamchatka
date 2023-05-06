@@ -1,0 +1,128 @@
+extends ../../layout/layout
+
+block content
+	section.aboutp
+		.container 	
+			.aboutp__top
+				+breadcrumb(['Главная'], 'Об отеле')
+				.aboutp__row
+					h1 Камчатка Шале — самый восточный пятизвездочный отель России 
+					.aboutp__down
+						<svg   viewBox="0 0 196 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="98" cy="98" r="97" stroke="white" stroke-width="2"/>
+							<path d="M98 64L98 131M98 131C98 126.45 99.76 116.548 110 116.548M98 131C98 126.45 96.24 116.548 86 116.548" stroke=" " stroke-width="2"/>
+						</svg>
+				.booking
+					.booking__item
+						p Заезд
+						span#booking__check-in 20.06.23
+						div ⌵
+					img.booking__sep(src='img/head_booking-sep.svg', alt='sep')
+					.booking__item
+						p Выезд
+						span#booking__check-out 20.06.23
+						div ⌵
+					img.booking__sep(src='img/head_booking-sep.svg', alt='sep')
+					.booking__item
+						p Гости (в т.ч. дети)
+						span#booking__guest 2 человека
+						div ⌵
+					img.booking__sep(src='img/head_booking-sep.svg', alt='sep')
+					button.button
+						span.gradient-text Забронировать
+			.aboutp__bg
+				+picture('about-1','jpg')
+			.whitebox
+				.about-text-1.block
+					h2 Неповторимая красота Камчатки в безупречной огранке комфорта и сервиса
+	
+							
+					.about-text-1__row
+						.about-text-1__left
+							p Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые взыскательные вкусы и высокие ожидания. Часть номеров выполнены по образу корабельных кают великих первооткрывателей и исследователей Камчатки — «Беринг», «Дежнев», «Атласов», «Крашенинников»
+							.about-text-1__slider.swiper 
+								.swiper-wrapper
+									.swiper-slide
+										+picture('about-2','jpg')
+									.swiper-slide
+										+picture('about-2','jpg')
+									.swiper-slide
+										+picture('about-2','jpg')
+									.swiper-slide
+										+picture('about-2','jpg')
+									.swiper-slide
+										+picture('about-2','jpg')
+								.about-text-1__slider-pagi
+						.about-text-1__right 
+							p Никогда ещё дикая природа края не была так смиренна, как когда смотришь на неё из окна отеля Kamchatka Chalet 5*
+							+picture('about-3','jpg').about-text-1__img
+				.about-text-2.block
+					.h1 Наследие 
+						br
+						| первооткрывателей
+					.about-text-2__text-1
+						p От первых парусников экспедиции Крашенинникова и до сегодняшних дней — великолепие Камчатки завораживает и восхищает каждого, кто осмелится ступить на эту землю. 
+					.about-text-2__text-2
+						p В Kamchatka Chalet 5* воплощен дух первооткрывателей. В интерьере представлены старинные навигационные приборы, гравюры и элементы наследия. А в библиотеке собраны оригинальные исторические и художественные издания о Камчатке и Дальнем Востоке, а также корреспонденция, которую вы можете отправить в любую точку мира. 
+		
+			.about-full-slider.swiper.block
+				.swiper-wrapper 
+					.swiper-slide
+						+picture('about-4','jpg')
+					.swiper-slide
+						+picture('about-4','jpg')
+					.swiper-slide
+						+picture('about-4','jpg')
+					.swiper-slide
+						+picture('about-4','jpg')
+					.swiper-slide
+						+picture('about-4','jpg')
+				.container 	
+					.about-full-slider__footer 
+						.about-full-slider__pagi
+						.about-full-slider__nav
+							.about-full-slider__nav-prev
+								<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="32.5" cy="34.5" r="31.5" stroke="white" stroke-width="2"/>
+									<path d="M34.0592 28.4971L27.8224 34.7338L34.0592 40.9705" stroke="white" stroke-width="2" stroke-linecap="square"/>
+								</svg>
+
+							.about-full-slider__nav-next
+								<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="32.5" cy="32.5" r="31.5" transform="matrix(-1 0 0 1 67 2)" stroke="white" stroke-width="2"/>
+									<path d="M32.9409 28.4971L39.1776 34.7338L32.9409 40.9705" stroke="white" stroke-width="2" stroke-linecap="square"/>
+								</svg>
+
+			.about-text-3.block 
+				.about-text-3__row
+					.about-text-3__text
+						.h1 Безукоризненный
+							br
+							| сервис
+						p В Kamchatka Chalet 5* вы сможете не только превосходно отдохнуть и получить сервис самого высокого уровня, но и прикоснуться к истории освоения Камчатки. Сотрудники хранят знания об истории края и с удовольствием расскажут вам обо всем, чтобы впечатления от Камчатки раскрылись полностью.
+					.about-text-3__logo 
+						img(src="img/c-logo-1.svg", alt="")
+						img(src="img/c-logo-2.svg", alt="")
+			.block 
+				.about-photos.swiper
+					.swiper-wrapper 
+						.swiper-slide 
+							+picture('about-5','jpg')
+						.swiper-slide 
+							+picture('about-6','jpg')
+						.swiper-slide 
+							+picture('about-7','jpg')
+						.swiper-slide 
+							+picture('about-8','jpg')
+
+					.about-photos__gallery-prev
+						<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32.5" cy="34.5" r="31.5" stroke="white" stroke-width="2"/>
+							<path d="M34.0592 28.4971L27.8224 34.7338L34.0592 40.9705" stroke="white" stroke-width="2" stroke-linecap="square"/>
+						</svg>
+
+					.about-photos__gallery-next
+						<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32.5" cy="32.5" r="31.5" transform="matrix(-1 0 0 1 67 2)" stroke="white" stroke-width="2"/>
+							<path d="M32.9408 28.4971L39.1775 34.7338L32.9408 40.9705" stroke="white" stroke-width="2" stroke-linecap="square"/>
+						</svg>

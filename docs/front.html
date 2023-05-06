@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"><meta content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kamchatka Chalet</title>
+    <link rel="icon" href="img/favicon.svg">
+    <link rel="stylesheet" href="css/base.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/vendor.css">
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <div class="nav__bg" style="display: none"></div>
+      <div class="container"><img class="nav__logo" id="nav-logo" src="img/logo.svg" alt="logo">
+        <div class="nav__burger" id="nav-burger">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="nav__contact"><a href="tel:+79140202121">+7 914 020 2121</a>
+          <button class="button"><span class="gradient-text">Забронировать</span></button>
+        </div>
+      </div>
+      <div class="nav__menu" style="display: none">
+        <div class="nav__menu-list">
+          <p class="nav__menu-item nav-item">Об отеле</p>
+          <p class="nav__menu-item nav-item">проживание</p>
+          <p class="nav__menu-item nav-item">Ресторан</p>
+          <p class="nav__menu-item nav-item">Услуги</p>
+          <p class="nav__menu-item nav-item">Туры</p>
+          <p class="nav__menu-item nav-item">Контакты</p>
+        </div>
+      </div>
+    </nav>
+    <div class="front-page">
+      <section class="header">
+        <div class="swiper" id="header-bg-swiper">
+          <div class="swiper-wrapper"><img class="header_bg-slide swiper-slide" src="img/head_bg.webp" alt="chalet photo"><img class="header_bg-slide swiper-slide" src="img/head_bg.webp" alt="chalet photo"><img class="header_bg-slide swiper-slide" src="img/head_bg.webp" alt="chalet photo"></div>
+        </div>
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-text">
+              <h1 class="header__title title">Камчатка Шале</h1>
+              <h4 class="header__subtitle text">
+                первый в истории Камчатки пятизвездочный отель
+                
+              </h4>
+            </div>
+            <div class="header__swiper-control">
+              <svg class="header__swiper-arrow" id="header-bg-swiper-next" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 17.5L97.5 17.5M97.5 17.5C90.8789 17.5 76.4684 14.9333 76.4684 4.72156e-07M97.5 17.5C90.8789 17.5 76.4684 20.0667 76.4684 35"></path>
+              </svg>
+              <div class="header__swiper-progress">
+                <svg class="header-timer" width="142" height="142" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" stroke="none">
+                    <circle stroke-width="1" stroke="#ffffff80" cx="50%" cy="50%" r="70"></circle>
+                  </g>
+                  <path class="header-timer__path-remaining" id="timer-path" fill="none" d="M 71 71 m -70, 0 a 70,70 0 1,0 140,0 a 70,70 0 1,0 -140,0"></path>
+                </svg>
+                <p><span id="header-cur-slide">01</span> /<span id="header-count-slides">08</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="booking">
+            <div class="booking__item">
+              <p>Заезд</p><span id="booking__check-in">20.06.23</span>
+              <div>⌵</div>
+            </div><img class="booking__sep" src="img/head_booking-sep.svg" alt="sep">
+            <div class="booking__item">
+              <p>Выезд</p><span id="booking__check-out">20.06.23</span>
+              <div>⌵</div>
+            </div><img class="booking__sep" src="img/head_booking-sep.svg" alt="sep">
+            <div class="booking__item">
+              <p>Гости (в т.ч. дети)</p><span id="booking__guest">2 человека</span>
+              <div>⌵</div>
+            </div><img class="booking__sep" src="img/head_booking-sep.svg" alt="sep">
+            <button class="button"><span class="gradient-text">Забронировать</span></button>
+          </div>
+        </div>
+      </section>
+      <section class="intro" id="intro">
+        <div class="container">
+          <p class="intro__main-text" id="intro_main-text"><span>Kamchatka Chalet</span> — первый в истории Камчатки пятизвездочный отель</p>
+          <p class="intro__text" id="intro-text01">Наши традиции гостеприимства прошли путь<br>от экспедиций первооткрывателей Камчатки<br>до самого восточного пятизвездочного отеля России…</p>
+          <p class="intro__text" id="intro-text02">Камчатка Шале 5* — вершина освоения полуострова. Гости отеля прикоснутся к наследию Камчатки, открывая для себя уникальную природу края и наслаждаясь безупречным сервисом.</p>
+          <div class="intro__img-swiper-box" id="intro-img-swiper-box">
+            <div class="swiper" id="intro-img-swiper">
+              <div class="swiper-wrapper"><img class="swiper-slide" src="img/intro_img01.webp" alt="landscape"><img class="swiper-slide" src="img/intro_img01.webp" alt="landscape"><img class="swiper-slide" src="img/intro_img01.webp" alt="landscape"></div>
+            </div>
+            <div class="intro__swiper-status">
+              <p class="gradient-text" id="intro-cur-slide">01</p>
+              <hr>
+              <p class="gradient-text" id="intro-count-slides">08</p>
+            </div>
+          </div><img class="intro__lscape" id="intro-img" src="img/intro_img02.webp" alt="landscape">
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about__logo" id="about-trigger"><img src="img/about_logo-dyn.svg" alt="logo"><img src="img/about_logo-fix.svg" alt="logo"></div>
+          <h1 class="about__title title gradient-text" id="about-title" style="opacity: 0">ОБ отеле</h1>
+          <p class="about__text text gradient-text" id="about-text" style="opacity: 0">Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые взыскательные вкусы и высокие ожидания. Часть номеров выполнены по образу корабельных кают великих первооткрывателей и исследователей Камчатки — «Беринг», «Дежнев», «Атласов», «Крашенинников»</p>
+          <button class="about__button button" id="about-but" style="opacity: 0"><span class="gradient-text">Подробнее об отеле</span></button>
+        </div>
+        <div class="about__chalet" id="about-chalet" style="opacity: 0">
+          <p class="text gradient-text">Гости, чье предпочтение — максимальная приватность, могут остановить свой выбор на отдельно стоящих шале, площадью от 150 до 260 м². Каждое шале имеет собственный бассейн с геотермальной водой.</p>
+        </div><img class="about__house" id="about-house" src="img/about_house.png" alt="house" style="opacity: 0">
+      </section>
+      <section class="habbit">
+        <div class="container">
+          <div class="habbit__head">
+            <h1 class="habbit__title title">Проживание</h1>
+            <div class="habbit-menu">
+              <div class="habbit-menu__item active">Все</div>
+              <div class="habbit-menu__item">Номера</div>
+              <div class="habbit-menu__item">Шале</div>
+            </div>
+          </div>
+          <div class="habbit-card">
+            <div class="swiper" id="habbit-img-swiper">
+              <div class="swiper-wrapper"><img class="swiper-slide" src="img/habbit_card01.webp" alt="card image"><img class="swiper-slide" src="img/habbit_card01.webp" alt="card image"></div>
+            </div>
+            <div class="habbit-card__info-wrap">
+              <div class="habbit-card__info-main">
+                <div class="swiper" id="habbit-info-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <h3 class="habbit-card__lvl gradient-text">STANDARD</h3>
+                      <p class="habbit-card__desc gradient-text">Этот светлый, изысканный и компактный номер обладает всем необходимым для релакса после увлекательно проведенного дня на Камчатке.</p>
+                      <div class="habbit-card__attr">
+                        <div class="habbit-card__attr-item">
+                          <h6>Площадь номера</h6>
+                          <p class="gradient-text">20 м2</p>
+                        </div>
+                        <div class="habbit-card__attr-item">
+                          <h6>Вместимость</h6>
+                          <p class="gradient-text">2 человека</p>
+                        </div>
+                        <div class="habbit-card__attr-item">
+                          <h6>Удобства</h6>
+                          <p class="gradient-text">Двуспальная кровать QUEEN SIZE 160*200</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <h3 class="habbit-card__lvl gradient-text">STANDARD</h3>
+                      <p class="habbit-card__desc gradient-text">Этот светлый, изысканный и компактный номер обладает всем необходимым для релакса после увлекательно проведенного дня на Камчатке.</p>
+                      <div class="habbit-card__attr">
+                        <div class="habbit-card__attr-item">
+                          <h6>Площадь номера</h6>
+                          <p class="gradient-text">20 м2</p>
+                        </div>
+                        <div class="habbit-card__attr-item">
+                          <h6>Вместимость</h6>
+                          <p class="gradient-text">2 человека</p>
+                        </div>
+                        <div class="habbit-card__attr-item">
+                          <h6>Удобства</h6>
+                          <p class="gradient-text">Двуспальная кровать QUEEN SIZE 160*200</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="habbit-card__buttons">
+                  <button class="button">Забронировать</button><a class="gradient-text" href>Все номера</a>
+                </div>
+              </div>
+              <div class="habbit-card__info-foot">
+                <div class="habbit-card__info-progress">
+                  <p id="habbit-cur-slide">01</p>
+                  <div></div>
+                  <p id="habbit-count-slides">32</p>
+                </div>
+                <div class="habbit-card__info-foot-but">
+                  <svg id="habbit-swiper-prev" width="67" height="67" viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32.5" cy="34.5" r="31.5" stroke-width="2"></circle>
+                    <path d="M34.059 28.4971L27.8223 34.7338L34.059 40.9705" stroke-width="2" stroke-linecap="square"></path>
+                  </svg>
+                  <svg id="habbit-swiper-next" width="67" height="67" viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32.5" cy="32.5" r="31.5" transform="matrix(-1 0 0 1 67 2)" stroke-width="2"></circle>
+                    <path d="M32.941 28.4971L39.1777 34.7338L32.941 40.9705" stroke-width="2" stroke-linecap="square"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bering">
+        <div class="container">
+          <h1 class="bering__title title">Ресторан «Беринг»</h1>
+          <div class="swiper" id="bering-swiper">
+            <div class="swiper-wrapper"><img class="swiper-slide" src="img/bering_img-03.webp" alt="bering image"><img class="swiper-slide" src="img/bering_img-02.webp" alt="bering image">
+              <div class="bering-card swiper-slide">
+                <h2 class="bering-card__title">Высокая кухня:</h2>
+                <p class="bering-card__text">Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.</p>
+              </div><img class="swiper-slide" src="img/bering_img-01.webp" alt="bering image"><img class="swiper-slide" src="img/bering_img-04.webp" alt="bering image">
+            </div>
+            <svg class="swiper-button-prev" id="bering-swiper-prev" width="67" height="67" viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32.5" cy="34.5" r="31.5" stroke-width="2"></circle>
+              <path d="M34.059 28.4971L27.8223 34.7338L34.059 40.9705" stroke-width="2" stroke-linecap="square"></path>
+            </svg>
+            <svg class="swiper-button-next" id="bering-swiper-next" width="67" height="67" viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32.5" cy="32.5" r="31.5" transform="matrix(-1 0 0 1 67 2)" stroke-width="2"></circle>
+              <path d="M32.941 28.4971L39.1777 34.7338L32.941 40.9705" stroke-width="2" stroke-linecap="square"></path>
+            </svg>
+          </div>
+          <button class="bering__button button">Подробнее о ресторане	</button>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <h1 class="services__title title">УСЛУГИ</h1>
+          <div class="services__swipers-wrap">
+            <div class="swiper" id="services-img-swiper">
+              <div class="swiper-wrapper"><img class="swiper-slide" src="img/services_img-01.webp" alt="service image"><img class="swiper-slide" src="img/services_img-02.webp" alt="service image"><img class="swiper-slide" src="img/services_img-02.webp" alt="service image"><img class="swiper-slide" src="img/services_img-02.webp" alt="service image"><img class="swiper-slide" src="img/services_img-02.webp" alt="service image"></div>
+            </div>
+            <div class="swiper" id="services-info-swiper">
+              <div class="swiper-wrapper">
+                <div class="service swiper-slide">
+                  <hr>
+                  <h2 class="service__title">Термальный бассейн</h2>
+                  <p class="service__text">Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.</p>
+                  <button class="service__button button">Подробнее</button>
+                </div>
+                <div class="service swiper-slide">
+                  <hr>
+                  <h2 class="service__title">Банный комплекс</h2>
+                  <p class="service__text">Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.</p>
+                  <button class="service__button button">Подробнее</button>
+                </div>
+                <div class="service swiper-slide">
+                  <hr>
+                  <h2 class="service__title">Спа-кабинеты</h2>
+                  <p class="service__text">Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.</p>
+                  <button class="service__button button">Подробнее</button>
+                </div>
+                <div class="service swiper-slide">
+                  <hr>
+                  <h2 class="service__title">Тренажёрный зал</h2>
+                  <p class="service__text">Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.</p>
+                  <button class="service__button button">Подробнее</button>
+                </div>
+                <div class="service swiper-slide">
+                  <hr>
+                  <h2 class="service__title">Икорная лавка</h2>
+                  <p class="service__text">Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.</p>
+                  <button class="service__button button">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper" id="services-thumb-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image: url(img/services_img-01.webp);">
+                <div class="filter"></div>
+                <div class="timer"></div>
+                <p>Термальный бассейн</p>
+              </div>
+              <div class="swiper-slide" style="background-image: url(img/services_img-02.webp);">
+                <div class="filter"></div>
+                <div class="timer"></div>
+                <p>Банный комплекс</p>
+              </div>
+              <div class="swiper-slide" style="background-image: url(img/services_img-02.webp);">
+                <div class="filter"></div>
+                <div class="timer"></div>
+                <p>Спа-кабинеты</p>
+              </div>
+              <div class="swiper-slide" style="background-image: url(img/services_img-02.webp);">
+                <div class="filter"></div>
+                <div class="timer"></div>
+                <p>Тренажёрный зал</p>
+              </div>
+              <div class="swiper-slide" style="background-image: url(img/services_img-02.webp);">
+                <div class="filter"></div>
+                <div class="timer"></div>
+                <p>Икорная лавка</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tours" id="tours">
+        <div class="tours__bg"><img src="img/tours_bg.webp" alt="background tour">
+          <div class="filter"></div>
+        </div>
+        <div class="tours__title title gradient-text" id="tours-title" style="opacity: 0; top: 100">Туры</div>
+        <div class="container">
+          <p class="tours__grandtext" id="tours-grandtext" style="opacity: 0"> Вы будете поражены уникальной<span>природой Камчатки, её суровой красотой и многообразием.</span></p>
+          <p class="tours__text">Посетить Долину гейзеров и природный парк Налычево или запечатлеть незабываемую красоту водопада живого вулкана Мутновский с борта нашего 6–местного вертолета Euroсopter.</p>
+          <div class="tours__swiper-box">
+            <div class="swiper" id="tours-card-swiper">
+              <div class="swiper-wrapper">
+                <div class="tour-card swiper-slide" style="background-image: url(img/tour_card-01.webp);">
+                  <div class="tour-card__filter-bg"></div>
+                  <div class="tour-card__filter-text"></div>
+                  <h3 class="tour-card__title">тур №1</h3>
+                  <p class="tour-card__text">Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые</p>
+                  <button class="tour-button button">Подробнее о туре</button>
+                </div>
+                <div class="tour-card swiper-slide" style="background-image: url(img/tour_card-02.webp);">
+                  <div class="tour-card__filter-bg"></div>
+                  <div class="tour-card__filter-text"></div>
+                  <h3 class="tour-card__title">тур №2</h3>
+                  <p class="tour-card__text">Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые</p>
+                  <button class="tour-button button">Подробнее о туре</button>
+                </div>
+                <div class="tour-card swiper-slide" style="background-image: url(img/tour_card-02.webp);">
+                  <div class="tour-card__filter-bg"></div>
+                  <div class="tour-card__filter-text"></div>
+                  <h3 class="tour-card__title">тур №3</h3>
+                  <p class="tour-card__text">Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые</p>
+                  <button class="tour-button button">Подробнее о туре</button>
+                </div>
+              </div>
+            </div>
+            <svg class="swiper-button-prev" id="tours-swiper-prev" width="67" height="67" viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32.5" cy="34.5" r="31.5" stroke-width="2"></circle>
+              <path d="M34.059 28.4971L27.8223 34.7338L34.059 40.9705" stroke-width="2" stroke-linecap="square"></path>
+            </svg>
+            <svg class="swiper-button-next" id="tours-swiper-next" width="67" height="67" viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32.5" cy="32.5" r="31.5" transform="matrix(-1 0 0 1 67 2)" stroke-width="2"></circle>
+              <path d="M32.941 28.4971L39.1777 34.7338L32.941 40.9705" stroke-width="2" stroke-linecap="square"></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="footer">
+      <div class="container">
+        <hr>
+        <div class="contact-box">
+          <div class="footer__logo-box"><img src="img/logo.svg" alt="logo">
+            <p>Первый в истории Камчатки пятизвездочный отель</p>
+          </div>
+          <div class="footer__nav-box">
+            <p class="nav-item">Об отеле</p>
+            <p class="nav-item">Номерной фонд</p>
+            <p class="nav-item">Ресторан</p>
+            <p class="nav-item">Услуги</p>
+            <p class="nav-item">Туры</p>
+            <p class="nav-item">Контакты</p>
+          </div>
+          <div class="footer__address-box"><a href="tel:+79140202121">+7 914 020 2121</a><a href="mailto:info@kamchatkachalet.ru">info@kamchatkachalet.ru</a><a href="https://yandex.ru/maps/-/CCU8BFQddD" target="_blank">Камчатский край, Паратунка, ул. Речная, 7</a></div>
+        </div>
+        <hr>
+        <div class="footer__meta-box">
+          <p>© 2022 ООО "Шале"</p>
+          <div class="creator-box">
+            <p>создание сайтов —</p><img src="img/logo_ct.svg" alt="logo ct" /> 
+          </div>
+        </div>
+      </div>
+    </section><script src="https://api-maps.yandex.ru/2.1/?apikey=99ec229a-463e-41f0-9fcb-238e13fd628c&lang=ru_RU" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

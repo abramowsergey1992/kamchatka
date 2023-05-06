@@ -1,0 +1,144 @@
+.contact {
+	padding-top: 105px;
+
+	.h1,
+	h1 {
+		margin-bottom: 50px;
+	}
+
+	&__maps {
+		background: #fff;
+	}
+
+	&__layers {
+		position: absolute;
+		top: 44px;
+		left: 50%;
+		transform: translateX(-50%);
+		border: solid #fff 4px;
+		max-width: calc(100% - 30px);
+		background: #fff;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: row;
+
+		@media(max-width:900px) {
+			top: 10px;
+		}
+
+		&-bg {
+			background: linear-gradient(136.07deg, #284C5B 0%, #051317 107.04%);
+			border-radius: 10px;
+			position: absolute;
+			left: 0;
+			z-index: -1;
+			transition: all 0.3s;
+		}
+
+	}
+
+	&__layer-btn {
+		border: 0 solid;
+		cursor: pointer;
+		background: transparent;
+		white-space: nowrap;
+		border-radius: 10px;
+		padding: 10px 20px;
+		font-weight: 700;
+		font-size: 14px;
+		transition: color 0.3s;
+
+		@media(max-width:800px) {
+			padding: 5px 10px;
+			line-height: 100%;
+			white-space: initial;
+		}
+
+		&._active {
+			color: #fff;
+		}
+
+		@include lh(14, 24);
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px 50px;
+		justify-content: space-between;
+	}
+
+	&__footer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-bottom: 80px;
+		gap: 20px 50px;
+		justify-content: space-between;
+	}
+
+	&__maps {
+		min-height: 400px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		position: relative;
+
+		&::before {
+			display: block;
+			content: '';
+			padding-bottom: 50%;
+		}
+	}
+}
+
+#map_1,
+#map_2 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.contact-item {
+	@media(max-width:600px) {
+		width: 100%;
+	}
+
+	&__label {
+		font-weight: 400;
+		font-size: 16px;
+		margin-bottom: 20px;
+		line-height: 20px;
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__body {
+		p {
+			font-weight: 700;
+			font-size: 24px;
+			margin-bottom: 20px;
+			max-width: 782px;
+			@include lh(24, 33);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@media(max-width:992px) {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+.ymaps-2-1-79-ground-pane {
+	filter: grayscale(1) !important;
+}

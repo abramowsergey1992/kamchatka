@@ -1,0 +1,67 @@
+include mixin
+
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		<meta content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title Kamchatka Chalet
+		link(rel='icon', href='img/favicon.svg')
+		link(rel='stylesheet', href='css/base.min.css')
+		link(rel='stylesheet', href='css/all.min.css')
+		link(rel='stylesheet', href='css/vendor.css')
+
+	body
+		nav.nav#nav
+			.nav__bg(style='display: none')
+			.container
+				img.nav__logo#nav-logo(src='img/logo.svg', alt='logo')
+				.nav__burger#nav-burger
+					div
+					div
+				.nav__contact
+					a(href='tel:+79140202121') +7 914 020 2121
+					button.button
+						span.gradient-text Забронировать
+			.nav__menu(style='display: none')
+				.nav__menu-list
+					p.nav__menu-item.nav-item Об отеле
+					p.nav__menu-item.nav-item проживание
+					p.nav__menu-item.nav-item Ресторан
+					p.nav__menu-item.nav-item Услуги
+					p.nav__menu-item.nav-item Туры
+					p.nav__menu-item.nav-item Контакты
+		block content
+
+		section.footer
+			.container
+				hr
+				.contact-box
+					.footer__logo-box
+						img(src='img/logo.svg', alt='logo')
+						p Первый в истории Камчатки пятизвездочный отель
+					.footer__nav-box
+						p.nav-item Об отеле
+						p.nav-item Номерной фонд
+						p.nav-item Ресторан
+						p.nav-item Услуги
+						p.nav-item Туры
+						p.nav-item Контакты
+					.footer__address-box
+						a(href='tel:+79140202121') +7 914 020 2121
+						a(href='mailto:info@kamchatkachalet.ru') info@kamchatkachalet.ru
+							
+						a(href='https://yandex.ru/maps/-/CCU8BFQddD', target='_blank') Камчатский край, Паратунка, ул. Речная, 7
+							
+				hr
+				.footer__meta-box
+					p © 2022 ООО "Шале"
+					.creator-box
+						p создание сайтов —
+						<img src="img/logo_ct.svg" alt="logo ct" /> 
+
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=99ec229a-463e-41f0-9fcb-238e13fd628c&lang=ru_RU" type="text/javascript"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		script(src='js/vendor.js')
+		script(src='js/main.js')

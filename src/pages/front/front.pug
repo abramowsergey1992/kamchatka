@@ -1,0 +1,302 @@
+extends ../../layout/layout
+
+block content
+	.front-page
+		section.header
+			.swiper#header-bg-swiper
+				.swiper-wrapper
+					img.header_bg-slide.swiper-slide(src='img/head_bg.webp', alt='chalet photo')
+					img.header_bg-slide.swiper-slide(src='img/head_bg.webp', alt='chalet photo')
+					img.header_bg-slide.swiper-slide(src='img/head_bg.webp', alt='chalet photo')
+			.container
+				.header__content
+					.header__content-text
+						h1.header__title.title Камчатка Шале
+						h4.header__subtitle.text.
+							
+							первый в истории Камчатки пятизвездочный отель
+							
+					.header__swiper-control
+						svg#header-bg-swiper-next.header__swiper-arrow(fill='none', xmlns='http://www.w3.org/2000/svg')
+							path(d='M0 17.5L97.5 17.5M97.5 17.5C90.8789 17.5 76.4684 14.9333 76.4684 4.72156e-07M97.5 17.5C90.8789 17.5 76.4684 20.0667 76.4684 35')
+						.header__swiper-progress
+							svg.header-timer(width='142', height='142', xmlns='http://www.w3.org/2000/svg')
+								g(fill='none', stroke='none')
+									circle(stroke-width='1', stroke='#ffffff80', cx='50%', cy='50%', r='70')
+								path#timer-path.header-timer__path-remaining(fill='none', d='M 71 71 m -70, 0 a 70,70 0 1,0 140,0 a 70,70 0 1,0 -140,0')
+							p
+								span#header-cur-slide 01
+								|  /
+
+								span#header-count-slides 08
+				.booking
+					.booking__item
+						p Заезд
+						span#booking__check-in 20.06.23
+						div ⌵
+					img.booking__sep(src='img/head_booking-sep.svg', alt='sep')
+					.booking__item
+						p Выезд
+						span#booking__check-out 20.06.23
+						div ⌵
+					img.booking__sep(src='img/head_booking-sep.svg', alt='sep')
+					.booking__item
+						p Гости (в т.ч. дети)
+						span#booking__guest 2 человека
+						div ⌵
+					img.booking__sep(src='img/head_booking-sep.svg', alt='sep')
+					button.button
+						span.gradient-text Забронировать
+		
+		section.intro#intro
+			.container
+				p.intro__main-text#intro_main-text
+					span Kamchatka Chalet
+					|  — первый в истории Камчатки пятизвездочный отель
+
+				p.intro__text#intro-text01
+					| Наши традиции гостеприимства прошли путь
+
+					br
+					| от экспедиций первооткрывателей Камчатки
+
+					br
+					| до самого восточного пятизвездочного отеля России…
+
+				p.intro__text#intro-text02 Камчатка Шале 5* — вершина освоения полуострова. Гости отеля прикоснутся к наследию Камчатки, открывая для себя уникальную природу края и наслаждаясь безупречным сервисом.
+					
+				.intro__img-swiper-box#intro-img-swiper-box
+					.swiper#intro-img-swiper
+						.swiper-wrapper
+							img(src='img/intro_img01.webp', alt='landscape').swiper-slide
+							img(src='img/intro_img01.webp', alt='landscape').swiper-slide
+							img(src='img/intro_img01.webp', alt='landscape').swiper-slide
+								
+								
+					.intro__swiper-status
+						p.gradient-text#intro-cur-slide 01
+						hr
+						p.gradient-text#intro-count-slides 08
+				img.intro__lscape#intro-img(src='img/intro_img02.webp', alt='landscape')
+		section.about#about
+			.container
+				.about__logo#about-trigger
+					img(src='img/about_logo-dyn.svg', alt='logo')
+					img(src='img/about_logo-fix.svg', alt='logo')
+				h1.about__title.title.gradient-text#about-title(style='opacity: 0') ОБ отеле
+					
+				p.about__text.text.gradient-text#about-text(style='opacity: 0') Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые взыскательные вкусы и высокие ожидания. Часть номеров выполнены по образу корабельных кают великих первооткрывателей и исследователей Камчатки — «Беринг», «Дежнев», «Атласов», «Крашенинников»
+					
+				button.about__button.button#about-but(style='opacity: 0')
+					span.gradient-text Подробнее об отеле
+			.about__chalet#about-chalet(style='opacity: 0')
+				p.text.gradient-text Гости, чье предпочтение — максимальная приватность, могут остановить свой выбор на отдельно стоящих шале, площадью от 150 до 260 м². Каждое шале имеет собственный бассейн с геотермальной водой.
+					
+			img.about__house#about-house(src='img/about_house.png', alt='house', style='opacity: 0')
+		section.habbit
+			.container
+				.habbit__head
+					h1.habbit__title.title Проживание
+					.habbit-menu
+						.habbit-menu__item.active Все
+						.habbit-menu__item Номера
+						.habbit-menu__item Шале
+				.habbit-card
+					.swiper#habbit-img-swiper
+						.swiper-wrapper
+							img.swiper-slide(src='img/habbit_card01.webp', alt='card image')
+							img.swiper-slide(src='img/habbit_card01.webp', alt='card image')
+					.habbit-card__info-wrap
+						.habbit-card__info-main
+							.swiper#habbit-info-swiper
+								.swiper-wrapper
+									.swiper-slide
+										h3.habbit-card__lvl.gradient-text STANDARD
+											
+										p.habbit-card__desc.gradient-text Этот светлый, изысканный и компактный номер обладает всем необходимым для релакса после увлекательно проведенного дня на Камчатке.
+											
+										.habbit-card__attr
+											.habbit-card__attr-item
+												h6 Площадь номера
+												p.gradient-text 20 м2
+													
+											.habbit-card__attr-item
+												h6 Вместимость
+												p.gradient-text 2 человека
+													
+											.habbit-card__attr-item
+												h6 Удобства
+												p.gradient-text Двуспальная кровать QUEEN SIZE 160*200
+													
+									.swiper-slide
+										h3.habbit-card__lvl.gradient-text STANDARD
+											
+										p.habbit-card__desc.gradient-text Этот светлый, изысканный и компактный номер обладает всем необходимым для релакса после увлекательно проведенного дня на Камчатке.
+											
+										.habbit-card__attr
+											.habbit-card__attr-item
+												h6 Площадь номера
+												p.gradient-text 20 м2
+													
+											.habbit-card__attr-item
+												h6 Вместимость
+												p.gradient-text 2 человека
+													
+											.habbit-card__attr-item
+												h6 Удобства
+												p.gradient-text Двуспальная кровать QUEEN SIZE 160*200
+													
+							.habbit-card__buttons
+								button.button Забронировать
+								a.gradient-text(href) Все номера
+						.habbit-card__info-foot
+							.habbit-card__info-progress
+								p#habbit-cur-slide 01
+								div
+								p#habbit-count-slides 32
+							.habbit-card__info-foot-but
+								svg#habbit-swiper-prev(width='67', height='67', viewBox='0 0 67 67', xmlns='http://www.w3.org/2000/svg')
+									circle(cx='32.5', cy='34.5', r='31.5', stroke-width='2')
+									path(d='M34.059 28.4971L27.8223 34.7338L34.059 40.9705', stroke-width='2', stroke-linecap='square')
+								svg#habbit-swiper-next(width='67', height='67', viewBox='0 0 67 67', xmlns='http://www.w3.org/2000/svg')
+									circle(cx='32.5', cy='32.5', r='31.5', transform='matrix(-1 0 0 1 67 2)', stroke-width='2')
+									path(d='M32.941 28.4971L39.1777 34.7338L32.941 40.9705', stroke-width='2', stroke-linecap='square')
+		section.bering
+			.container
+				h1.bering__title.title Ресторан «Беринг»
+				.swiper#bering-swiper
+					.swiper-wrapper
+						img.swiper-slide(src='img/bering_img-03.webp', alt='bering image')
+						img.swiper-slide(src='img/bering_img-02.webp', alt='bering image')
+						.bering-card.swiper-slide
+							h2.bering-card__title Высокая кухня:
+							p.bering-card__text Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.
+								
+						img.swiper-slide(src='img/bering_img-01.webp', alt='bering image')
+						img.swiper-slide(src='img/bering_img-04.webp', alt='bering image')
+					svg.swiper-button-prev#bering-swiper-prev(width='67', height='67', viewBox='0 0 67 67', xmlns='http://www.w3.org/2000/svg')
+						circle(cx='32.5', cy='34.5', r='31.5', stroke-width='2')
+						path(d='M34.059 28.4971L27.8223 34.7338L34.059 40.9705', stroke-width='2', stroke-linecap='square')
+					svg.swiper-button-next#bering-swiper-next(width='67', height='67', viewBox='0 0 67 67', xmlns='http://www.w3.org/2000/svg')
+						circle(cx='32.5', cy='32.5', r='31.5', transform='matrix(-1 0 0 1 67 2)', stroke-width='2')
+						path(d='M32.941 28.4971L39.1777 34.7338L32.941 40.9705', stroke-width='2', stroke-linecap='square')
+				button.bering__button.button Подробнее о ресторане	
+		section.services
+			.container
+				h1.services__title.title УСЛУГИ
+				.services__swipers-wrap
+					.swiper#services-img-swiper
+						.swiper-wrapper
+							img.swiper-slide(src='img/services_img-01.webp', alt='service image')
+							img.swiper-slide(src='img/services_img-02.webp', alt='service image')
+							img.swiper-slide(src='img/services_img-02.webp', alt='service image')
+							img.swiper-slide(src='img/services_img-02.webp', alt='service image')
+							img.swiper-slide(src='img/services_img-02.webp', alt='service image')
+					.swiper#services-info-swiper
+						.swiper-wrapper
+							.service.swiper-slide
+								hr
+								h2.service__title Термальный бассейн
+									
+								p.service__text Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.
+									
+								button.service__button.button Подробнее
+									
+							.service.swiper-slide
+								hr
+								h2.service__title Банный комплекс
+								p.service__text Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.
+									
+								button.service__button.button Подробнее
+									
+							.service.swiper-slide
+								hr
+								h2.service__title Спа-кабинеты
+								p.service__text Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.
+									
+								button.service__button.button Подробнее
+									
+							.service.swiper-slide
+								hr
+								h2.service__title Тренажёрный зал
+								p.service__text Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.
+									
+								button.service__button.button Подробнее
+									
+							.service.swiper-slide
+								hr
+								h2.service__title Икорная лавка
+								p.service__text Классические блюда дополнены оригинальными продуктами края и ретроспективно погружают гостя в эпоху освоения Камчатки.
+									
+								button.service__button.button Подробнее
+									
+				.swiper#services-thumb-swiper
+					.swiper-wrapper
+						.swiper-slide(style='background-image: url(img/services_img-01.webp);')
+							.filter
+							.timer
+							p Термальный бассейн
+						.swiper-slide(style='background-image: url(img/services_img-02.webp);')
+							.filter
+							.timer
+							p Банный комплекс
+						.swiper-slide(style='background-image: url(img/services_img-02.webp);')
+							.filter
+							.timer
+							p Спа-кабинеты
+						.swiper-slide(style='background-image: url(img/services_img-02.webp);')
+							.filter
+							.timer
+							p Тренажёрный зал
+						.swiper-slide(style='background-image: url(img/services_img-02.webp);')
+							.filter
+							.timer
+							p Икорная лавка
+		section.tours#tours
+			.tours__bg
+				img(src='img/tours_bg.webp', alt='background tour')
+				.filter
+			.tours__title.title.gradient-text#tours-title(style='opacity: 0; top: 100') Туры
+				
+			.container
+				p.tours__grandtext#tours-grandtext(style='opacity: 0')
+					|  Вы будете поражены уникальной
+
+					span природой Камчатки, её суровой красотой и многообразием.
+						
+				p.tours__text Посетить Долину гейзеров и природный парк Налычево или запечатлеть незабываемую красоту водопада живого вулкана Мутновский с борта нашего 6–местного вертолета Euroсopter.
+					
+				.tours__swiper-box
+					.swiper#tours-card-swiper
+						.swiper-wrapper
+							.tour-card.swiper-slide(style='background-image: url(img/tour_card-01.webp);')
+								.tour-card__filter-bg
+								.tour-card__filter-text
+								h3.tour-card__title тур №1
+								p.tour-card__text Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые
+									
+								button.tour-button.button Подробнее о туре
+									
+							.tour-card.swiper-slide(style='background-image: url(img/tour_card-02.webp);')
+								.tour-card__filter-bg
+								.tour-card__filter-text
+								h3.tour-card__title тур №2
+								p.tour-card__text Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые
+									
+								button.tour-button.button Подробнее о туре
+									
+							.tour-card.swiper-slide(style='background-image: url(img/tour_card-02.webp);')
+								.tour-card__filter-bg
+								.tour-card__filter-text
+								h3.tour-card__title тур №3
+								p.tour-card__text Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые
+									
+								button.tour-button.button Подробнее о туре
+									
+					svg.swiper-button-prev#tours-swiper-prev(width='67', height='67', viewBox='0 0 67 67', xmlns='http://www.w3.org/2000/svg')
+						circle(cx='32.5', cy='34.5', r='31.5', stroke-width='2')
+						path(d='M34.059 28.4971L27.8223 34.7338L34.059 40.9705', stroke-width='2', stroke-linecap='square')
+					svg.swiper-button-next#tours-swiper-next(width='67', height='67', viewBox='0 0 67 67', xmlns='http://www.w3.org/2000/svg')
+						circle(cx='32.5', cy='32.5', r='31.5', transform='matrix(-1 0 0 1 67 2)', stroke-width='2')
+						path(d='M32.941 28.4971L39.1777 34.7338L32.941 40.9705', stroke-width='2', stroke-linecap='square')
+		

@@ -1,0 +1,162 @@
+extends ../../layout/layout
+
+block content
+		.container 
+			section.rooms
+				+breadcrumb(['Главная'], 'Проживание')
+				.rooms__head
+					h1.rooms__title Проживание
+					.rooms__filters
+						button.rooms__filter._active(type="button",data-filter="all") Все
+						button.rooms__filter(type="button",data-filter="number") Номера
+						button.rooms__filter(type="button",data-filter="chalet") Шале
+				.room(data-filter="number")
+					.room__grid
+						.room__photo
+							+picture('r-1','jpg')
+							a.room__plus(href="#")
+						.room__content
+							.room__title STANDARD
+							.room__desc 
+								p Этот светлый, изысканный и компактный номер обладает всем необходимым для релакса после увлекательно проведённого дня на Камчатке.
+							ul.room__parametrs 
+								li.room__parametr
+									.room__parametr-title Площадь номера
+									.room__parametr-content 20 м
+										sup 2
+								li.room__parametr
+									.room__parametr-title Вместимость
+									.room__parametr-content 2 человека
+								li.room__parametr
+									.room__parametr-title Удобства
+									.room__parametr-content Двуспальная кровать 
+										br
+										| QUEEN SIZE 160х200
+							.room__btns
+								a(href="#").room__book  Забронировать 
+								a(href="#").room__link Подробнее о номере
+				.room(data-filter="number")
+					.room__grid
+						.room__photo
+							+picture('r-2','jpg')
+							a.room__plus(href="#")
+						.room__content
+							.room__title COMFORT
+							.room__desc 
+								p Удобный однокомнатный номер для двоих. Приятный интерьер с яркими акцентами и увеличенная площадь номера создадут для вас уют и комфорт после камчатских приключений.
+							ul.room__parametrs 
+								li.room__parametr
+									.room__parametr-title Площадь номера
+									.room__parametr-content 26 м
+										sup 2
+								li.room__parametr
+									.room__parametr-title Вместимость
+									.room__parametr-content 2 человека
+								li.room__parametr
+									.room__parametr-title Удобства
+									.room__parametr-content Двуспальная кровать 
+										br
+										| KING SIZE 180х200
+							.room__btns
+								a(href="#").room__book  Забронировать 
+								a(href="#").room__link Подробнее о номере
+				.room(data-filter="number")
+					.room__grid
+						.room__photo
+							+picture('r-3','jpg')
+							a.room__plus(href="#")
+						.room__content
+							.room__title JUNIOR
+							.room__desc 
+								p Номер категории Джуниор предлагает исключительный комфорт для каждого гостя.
+							ul.room__parametrs 
+								li.room__parametr
+									.room__parametr-title Площадь номера
+									.room__parametr-content 34 м
+										sup 2
+								li.room__parametr
+									.room__parametr-title Вместимость
+									.room__parametr-content 1 человек
+								li.room__parametr
+									.room__parametr-title Удобства
+									.room__parametr-content Двуспальная кровать 
+										br
+										| KING SIZE 180х200
+							.room__btns
+								a(href="#").room__book  Забронировать 
+								a(href="#").room__link Подробнее о номере
+				.room(data-filter="number")
+					.room__grid
+						.room__photo
+							+picture('r-4','jpg')
+							a.room__plus(href="#")
+						.room__content
+							.room__title JUNIOR SUITE
+							.room__desc 
+								p Прекрасный вариант для длительной поездки  на Камчатку: просторный номер объединил  в себе пространство для отдыха и вместительную гардеробную комнату.
+							ul.room__parametrs 
+								li.room__parametr
+									.room__parametr-title Площадь номера
+									.room__parametr-content 39 м
+										sup 2
+								li.room__parametr
+									.room__parametr-title Вместимость
+									.room__parametr-content 3 человека
+								li.room__parametr
+									.room__parametr-title Удобства
+									.room__parametr-content Двуспальная кровать 
+										br
+										| EURO 200х200
+							.room__btns
+								a(href="#").room__book  Забронировать 
+								a(href="#").room__link Подробнее о номере
+				.room(data-filter="number")
+					.room__grid
+						.room__photo
+							+picture('r-5','jpg')
+							a.room__plus(href="#")
+						.room__content
+							.room__title DELUXE
+							.room__desc 
+								p Номера категории Deluxe с лаконичным, современным дизайном, располагают просторной гостиной и отдельной спальней.
+							ul.room__parametrs 
+								li.room__parametr
+									.room__parametr-title Площадь номера
+									.room__parametr-content 34 м
+										sup 2
+								li.room__parametr
+									.room__parametr-title Вместимость
+									.room__parametr-content 1 человек
+								li.room__parametr
+									.room__parametr-title Удобства
+									.room__parametr-content Двуспальная кровать 
+										br
+										| KING SIZE 180х200
+							.room__btns
+								a(href="#").room__book  Забронировать 
+								a(href="#").room__link Подробнее о номере
+				.room(data-filter="chalet")
+					.room__grid
+						.room__photo
+							+picture('r-6','jpg')
+							a.room__plus(href="#")
+						.room__content
+							.room__title CHALET
+							.room__desc 
+								p 100 квадратных метров общего пространства с дизайном в стиле альпийский деревни на берегу реки Карымшина, с собственным термальным бассейном и шикарным видом на Вилючинский вулкан.
+							ul.room__parametrs 
+								li.room__parametr
+									.room__parametr-title Площадь номера
+									.room__parametr-content 100 м
+										sup 2
+								li.room__parametr
+									.room__parametr-title Вместимость
+									.room__parametr-content 2 комнаты
+								li.room__parametr
+									.room__parametr-title Удобства
+									.room__parametr-content Двуспальная кровать 
+										br
+										| KING SIZE 180х200
+							.room__btns
+								a(href="#").room__book  Забронировать 
+								a(href="#").room__link Подробнее о номере
