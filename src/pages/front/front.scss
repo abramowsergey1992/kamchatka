@@ -1,0 +1,178 @@
+#header-bg-swiper {
+	transition: transform 0.4s;
+
+	&._anim {
+		transform: scale(0.85) !important;
+	}
+}
+
+#intro-img,
+#intro-img-swiper-box,
+#about-house {
+	opacity: 1 !important;
+}
+
+.intro__row {
+	display: grid;
+	grid-template-columns: auto 288px;
+	gap: 20px;
+	margin-top: 100px;
+
+	@media(max-width:1024px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.intro__main-text {
+	margin-top: 0;
+}
+
+.intro__img-swiper-box {}
+
+.intro__compas {
+	@media(max-width:1024px) {
+		display: none;
+	}
+
+	filter: drop-shadow(7px 70px 63px rgba(0, 0, 0, 0.3));
+}
+
+.habbit {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.habbit__head {
+	align-items: baseline;
+}
+
+.habbit-menu {
+	position: relative;
+	top: -10px;
+}
+
+#intro_main-text {
+	@include clampf(29px, 96px);
+
+}
+
+.habbit-card {
+	.swiper-slide {
+		overflow: hidden;
+	}
+
+	&__plus {
+		background: linear-gradient(136.07deg, #831B23 0%, #43070B 107.04%);
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		border-radius: 50%;
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: translateX(-50%) translateY(-50%) scale(1.2);
+
+			&::before {
+				transform: translateX(-50%) translateY(-50%) scale(1.5);
+			}
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 1V14M1 7.5H14' stroke='%23F2F2F2' stroke-width='2'/%3E%3C/svg%3E%0A");
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			transition: transform 0.3s;
+
+
+		}
+
+		&::after {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 100vmax;
+			height: 100vmax;
+			display: block;
+			content: '';
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
+}
+
+.habbit .habbit-card__slide._d-none {
+	display: none !important;
+}
+
+.header__title {
+	position: relative;
+	opacity: 0;
+	left: 300px;
+
+	transition: left 0.7s, opacity 0.4s;
+
+	.header__content-text._anim & {
+		opacity: 1;
+		left: 0px;
+	}
+}
+
+.about .container {
+	min-height: initial;
+}
+
+.about__chalet {
+	position: relative;
+	bottom: 0;
+	top: 0;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: calc(100vw * -0.15);
+
+	@media(max-width:1200px) {
+		margin-bottom: calc(100vw * -0.18);
+	}
+}
+
+.about__house {
+	position: relative;
+
+
+	&::before {
+		display: block;
+		padding-bottom: 45.74%;
+		content: '';
+	}
+
+	img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.header__subtitle {
+	position: relative;
+	opacity: 0;
+
+
+	transition: opacity 0.5s;
+	transition-delay: 0.7s;
+
+	.header__content-text._anim & {
+		opacity: 1;
+
+	}
+}
