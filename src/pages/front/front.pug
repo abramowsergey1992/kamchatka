@@ -5,9 +5,18 @@ block content
 		section.header
 			.swiper#header-bg-swiper._anim
 				.swiper-wrapper
-					img.header_bg-slide.swiper-slide(src='img/head_bg.webp', alt='chalet photo')
-					img.header_bg-slide.swiper-slide(src='img/head_bg.webp', alt='chalet photo')
-					img.header_bg-slide.swiper-slide(src='img/head_bg.webp', alt='chalet photo')
+					.swiper-slide
+						+picture('about-bg-1','jpg').header_bg-slide
+					.swiper-slide
+						+picture('about-bg-2','jpg').header_bg-slide
+					.swiper-slide
+						+picture('about-bg-3','jpg').header_bg-slide
+					.swiper-slide
+						+picture('about-bg-4','jpg').header_bg-slide
+					.swiper-slide
+						+picture('about-bg-5','jpg').header_bg-slide
+					.swiper-slide
+						+picture('about-bg-6','jpg').header_bg-slide
 			.container
 				.header__content
 					.header__content-text
@@ -68,7 +77,7 @@ block content
 				.intro__img-swiper-box#intro-img-swiper-box(data-aos="fade-up")
 					.swiper#intro-img-swiper
 						.swiper-wrapper
-							img(src='img/intro_img01.webp', alt='landscape').swiper-slide
+							.swiper-slide
 							img(src='img/intro_img01.webp', alt='landscape').swiper-slide
 							img(src='img/intro_img01.webp', alt='landscape').swiper-slide
 								
@@ -95,7 +104,7 @@ block content
 					
 			.about__house#about-house
 				img(src='img/about_house2.png', alt='house',data-aos="fade-up",data-aos-offset="500")
-		section.habbit
+		section.habbit#habbit
 			.container(data-aos="fade-up")
 				.habbit__head
 					h1.habbit__title.title Проживание

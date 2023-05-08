@@ -26,15 +26,12 @@ html(lang='ru')
 						span.gradient-text Забронировать
 			.nav__menu(style='display: none')
 				.nav__menu-list
-					p.nav__menu-item.nav-item Об отеле
-					p.nav__menu-item.nav-item проживание
-					p.nav__menu-item.nav-item Ресторан
-					p.nav__menu-item.nav-item Услуги
-					p.nav__menu-item.nav-item Туры
-					p.nav__menu-item.nav-item Контакты
+					a.scroll-to.nav__menu-item.nav-item(href="#about") Об отеле
+					a.scroll-to.nav__menu-item.nav-item(href="#habbit") проживание
+					a.scroll-to.nav__menu-item.nav-item(href="#footer") Контакты
 		block content
 
-		section.footer
+		section.footer#footer
 			.container
 				hr
 				.contact-box
@@ -42,12 +39,10 @@ html(lang='ru')
 						img(src='img/logo.svg', alt='logo')
 						p Первый в истории Камчатки пятизвездочный отель
 					.footer__nav-box
-						p.nav-item Об отеле
-						p.nav-item Номерной фонд
-						p.nav-item Ресторан
-						p.nav-item Услуги
-						p.nav-item Туры
-						p.nav-item Контакты
+						a.scroll-to.nav-item(href="#about") Об отеле
+						a.scroll-to.nav-item(href="#habbit") Номерной фонд
+		
+						a.scroll-to.nav-item(href="#footer") Контакты
 					.footer__address-box
 						a(href='tel:+79140202121') +7 914 020 2121
 						a(href='mailto:info@kamchatkachalet.ru') info@kamchatkachalet.ru

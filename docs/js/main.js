@@ -191,6 +191,25 @@ $(function () {
 
 $(function () {});
 
+$(function () {
+	$(".rooms__filter").click(function () {
+		$(".rooms__filter").removeClass("_active");
+		$(this).addClass("_active");
+		let f = $(this).data("filter");
+		if (f == "all") {
+			$(".room").stop().slideDown();
+		} else {
+			$(".room").each(function () {
+				if (f == $(this).data("filter")) {
+					$(this).stop().slideDown();
+				} else {
+					$(this).stop().slideUp();
+				}
+			});
+		}
+	});
+});
+
 Fancybox.bind("[data-fancybox]", {});
 
 $(function () {
@@ -212,25 +231,6 @@ $(function () {
 			},
 		});
 	}
-});
-
-$(function () {
-	$(".rooms__filter").click(function () {
-		$(".rooms__filter").removeClass("_active");
-		$(this).addClass("_active");
-		let f = $(this).data("filter");
-		if (f == "all") {
-			$(".room").stop().slideDown();
-		} else {
-			$(".room").each(function () {
-				if (f == $(this).data("filter")) {
-					$(this).stop().slideDown();
-				} else {
-					$(this).stop().slideUp();
-				}
-			});
-		}
-	});
 });
 
 $(function () {
@@ -263,21 +263,21 @@ class Navigation {
 	static menu = document.getElementsByClassName("nav__menu")[0];
 	static logo = document.getElementById("nav-logo");
 	static burger = document.getElementById("nav-burger");
-	static refs = {
-		items: Array.from(document.getElementsByClassName("nav-item")),
-		about: document.getElementsByClassName("about")[0],
-		habit: document.getElementsByClassName("habit")[0],
-		bering: document.getElementsByClassName("bering")[0],
-		services: document.getElementsByClassName("services")[0],
-		tours: document.getElementsByClassName("tours")[0],
-		contacts: document.getElementsByClassName("footer")[0],
-	};
+	// static refs = {
+	// 	items: Array.from(document.getElementsByClassName("nav-item")),
+	// 	about: document.getElementsByClassName("about")[0],
+	// 	habit: document.getElementsByClassName("habit")[0],
+	// 	// bering: document.getElementsByClassName("bering")[0],
+	// 	// services: document.getElementsByClassName("services")[0],
+	// 	// tours: document.getElementsByClassName("tours")[0],
+	// 	contacts: document.getElementsByClassName("footer")[0],
+	// };
 
 	constructor() {
-		Navigation.logo.onclick = () => {
-			this.navOff();
-			window.scrollTo({ top: 0, behavior: "smooth" });
-		};
+		// Navigation.logo.onclick = () => {
+		// 	this.navOff();
+		// 	window.scrollTo({ top: 0, behavior: "smooth" });
+		// };
 
 		Navigation.burger.onclick = () => {
 			if (Navigation.nav.classList.contains("active")) this.navOff();
@@ -297,11 +297,11 @@ class Navigation {
 				Navigation.nav.classList.remove("down");
 		});
 
-		Navigation.refs.items.forEach((navItem, index) => {
-			navItem.onclick = () => {
-				this.navTo(index);
-			};
-		});
+		// Navigation.refs.items.forEach((navItem, index) => {
+		// 	navItem.onclick = () => {
+		// 		this.navTo(index);
+		// 	};
+		// });
 	}
 
 	navOff() {
@@ -376,6 +376,7 @@ const headerSwiperProgressElems = {
 };
 
 if (document.querySelector(".front-page")) {
+	let l = $(".header_bg-slide").length;
 	const headerSwiper = new Swiper("#header-bg-swiper", {
 		loop: true,
 		direction: "vertical",
@@ -399,20 +400,31 @@ if (document.querySelector(".front-page")) {
 		speed: 1000,
 
 		on: {
-			progress: function (swiper, progress) {
-				console.log(swiper, progress);
-			},
+			progress: function (swiper, progress) {},
 			init: function () {
-				headerSwiperProgressElems.numCountSlides.textContent = String(
-					this.slides.length
-				).padStart(2, "0");
-				// headerTimer.start();
+				$(".header__swiper-progress p").html(
+					`<span id="header-cur-slide">${String(
+						this.realIndex + 1
+					).padStart(
+						2,
+						"0"
+					)}</span> / <span id="header-count-slides">${String(
+						l
+					).padStart(2, "0")}</span>`
+				);
 			},
-			slideNextTransitionStart: function (swiper) {
-				headerSwiperProgressElems.numCurSlide.textContent = String(
-					this.realIndex + 1
-				).padStart(2, "0");
-				// headerTimer.stop();
+
+			slideChange: function () {
+				$(".header__swiper-progress p").html(
+					`<span id="header-cur-slide">${String(
+						this.realIndex + 1
+					).padStart(
+						2,
+						"0"
+					)}</span> / <span id="header-count-slides">${String(
+						l
+					).padStart(2, "0")}</span>`
+				);
 			},
 			slideNextTransitionEnd: function () {
 				// headerTimer.start();
@@ -450,7 +462,7 @@ if (document.querySelector(".front-page")) {
 		t += 10;
 	}, 10);
 	$(".header__swiper-arrow").click(function () {
-		t = 0;
+		t = autoplay;
 	});
 	//#endregion
 
@@ -807,3 +819,37 @@ if (document.querySelector(".front-page")) {
 		.addTo(controller);
 	//#endregion
 }
+$(function () {
+	var $page = $("html, body");
+	if (window.location.hash) {
+		if ($(window.location.hash).length) {
+			$page.animate(
+				{
+					scrollTop: $(window.location.hash).offset().top - 80,
+				},
+				400
+			);
+		}
+	}
+	$('a[href*="#"]').click(function () {
+		if ($($.attr(this, "href")).length) {
+			$page.animate(
+				{
+					scrollTop: $($.attr(this, "href")).offset().top - 80,
+				},
+				400
+			);
+			let nav = document.getElementById("nav");
+			let bg = document.getElementsByClassName("nav__bg")[0];
+			let menu = document.getElementsByClassName("nav__menu")[0];
+
+			document.body.style.overflow = "";
+			nav.classList.remove("active");
+			setTimeout(() => {
+				bg.style.display = "none";
+				menu.style.display = "none";
+			}, 730);
+		}
+		return false;
+	});
+});

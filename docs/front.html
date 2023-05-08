@@ -22,20 +22,44 @@
         </div>
       </div>
       <div class="nav__menu" style="display: none">
-        <div class="nav__menu-list">
-          <p class="nav__menu-item nav-item">Об отеле</p>
-          <p class="nav__menu-item nav-item">проживание</p>
-          <p class="nav__menu-item nav-item">Ресторан</p>
-          <p class="nav__menu-item nav-item">Услуги</p>
-          <p class="nav__menu-item nav-item">Туры</p>
-          <p class="nav__menu-item nav-item">Контакты</p>
-        </div>
+        <div class="nav__menu-list"><a class="scroll-to nav__menu-item nav-item" href="#about">Об отеле</a><a class="scroll-to nav__menu-item nav-item" href="#habbit">проживание</a><a class="scroll-to nav__menu-item nav-item" href="#footer">Контакты</a></div>
       </div>
     </nav>
     <div class="front-page">
       <section class="header">
         <div class="swiper _anim" id="header-bg-swiper">
-          <div class="swiper-wrapper"><img class="header_bg-slide swiper-slide" src="img/head_bg.webp" alt="chalet photo"><img class="header_bg-slide swiper-slide" src="img/head_bg.webp" alt="chalet photo"><img class="header_bg-slide swiper-slide" src="img/head_bg.webp" alt="chalet photo"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/about-bg-1.webp"/><img class="header_bg-slide" alt="" src="img/about-bg-1.jpg"/>
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/about-bg-2.webp"/><img class="header_bg-slide" alt="" src="img/about-bg-2.jpg"/>
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/about-bg-3.webp"/><img class="header_bg-slide" alt="" src="img/about-bg-3.jpg"/>
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/about-bg-4.webp"/><img class="header_bg-slide" alt="" src="img/about-bg-4.jpg"/>
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/about-bg-5.webp"/><img class="header_bg-slide" alt="" src="img/about-bg-5.jpg"/>
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/about-bg-6.webp"/><img class="header_bg-slide" alt="" src="img/about-bg-6.jpg"/>
+              </picture>
+            </div>
+          </div>
         </div>
         <div class="container">
           <div class="header__content">
@@ -85,7 +109,9 @@
           <p class="intro__text" id="intro-text02" data-aos="fade-up">Камчатка Шале 5* — вершина освоения полуострова. Гости отеля прикоснутся к наследию Камчатки, открывая для себя уникальную природу края и наслаждаясь безупречным сервисом.</p>
           <div class="intro__img-swiper-box" id="intro-img-swiper-box" data-aos="fade-up">
             <div class="swiper" id="intro-img-swiper">
-              <div class="swiper-wrapper"><img class="swiper-slide" src="img/intro_img01.webp" alt="landscape"><img class="swiper-slide" src="img/intro_img01.webp" alt="landscape"><img class="swiper-slide" src="img/intro_img01.webp" alt="landscape"></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"></div><img class="swiper-slide" src="img/intro_img01.webp" alt="landscape"><img class="swiper-slide" src="img/intro_img01.webp" alt="landscape">
+              </div>
             </div>
             <div class="intro__swiper-status">
               <p class="gradient-text" id="intro-cur-slide">01</p>
@@ -109,7 +135,7 @@
         </div>
         <div class="about__house" id="about-house"><img src="img/about_house2.png" alt="house" data-aos="fade-up" data-aos-offset="500"></div>
       </section>
-      <section class="habbit">
+      <section class="habbit" id="habbit">
         <div class="container" data-aos="fade-up">
           <div class="habbit__head">
             <h1 class="habbit__title title">Проживание</h1>
@@ -289,21 +315,14 @@
         </div>
       </section>
     </div>
-    <section class="footer">
+    <section class="footer" id="footer">
       <div class="container">
         <hr>
         <div class="contact-box">
           <div class="footer__logo-box"><img src="img/logo.svg" alt="logo">
             <p>Первый в истории Камчатки пятизвездочный отель</p>
           </div>
-          <div class="footer__nav-box">
-            <p class="nav-item">Об отеле</p>
-            <p class="nav-item">Номерной фонд</p>
-            <p class="nav-item">Ресторан</p>
-            <p class="nav-item">Услуги</p>
-            <p class="nav-item">Туры</p>
-            <p class="nav-item">Контакты</p>
-          </div>
+          <div class="footer__nav-box"><a class="scroll-to nav-item" href="#about">Об отеле</a><a class="scroll-to nav-item" href="#habbit">Номерной фонд</a><a class="scroll-to nav-item" href="#footer">Контакты</a></div>
           <div class="footer__address-box"><a href="tel:+79140202121">+7 914 020 2121</a><a href="mailto:info@kamchatkachalet.ru">info@kamchatkachalet.ru</a><a href="https://yandex.ru/maps/-/CCU8BFQddD" target="_blank">Камчатский край, Паратунка, ул. Речная, 7</a></div>
         </div>
         <hr>

@@ -1,0 +1,127 @@
+extends ../../layout/layout
+
+block content
+	section.room-detail
+		.room-detail__top
+			.room-detail__top-bg
+				+picture('j-001','jpg')
+			.container 
+				+breadcrumb(['Главная', 'Проживание'], 'JUNIOR')
+				.room-detail__top-text
+					h1.h1 JUNIOR
+					p  Номер категории Джуниор предлагает исключительный комфорт для каждого гостя. Номер оснащен просторной спальней, а интерьер дополнен диваном или кроватью и просторной зоной отдыха. Замечательный выбор для семейного путешествия по Камчатскому полуострову.
+				.room-detail__top-down
+					<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M26 1C12.1929 0.999999 1 12.1929 1 26C0.999999 39.8071 12.1929 51 26 51C39.8071 51 51 39.8071 51 26C51 12.1929 39.8071 1 26 1Z" stroke="white"/>
+						<path d="M30 29L26 33M26 33L22 29M26 33L26 20" stroke="white"/>
+						</svg>
+		.container 
+			.room-detail__content 
+				.room-detail__content-row 
+					div 
+						h2 УДобства номера
+						ul.room-detail__list-1
+							li 
+								img(src="img/r-icon-1.svg", alt="")
+								p Площадь 34 квадратных метров;
+
+							li 
+								img(src="img/r-icon-2.svg", alt="")
+								p Бесплатный высокоскоростной беспроводной интернет (Wi-Fi);
+
+							li 
+								img(src="img/r-icon-3.svg", alt="")
+								p Современный 55 LED телевизор, а также спутниковое телевидение;
+
+							li 
+								img(src="img/r-icon-4.svg", alt="")
+								p  Климат контроль с системой теплого пола;
+
+							li 
+								img(src="img/r-icon-5.svg", alt="")
+								p  Двуспальная кровать KING SIZE 180*200
+
+							li 
+								img(src="img/r-icon-6.svg", alt="")
+								p Мини-бар
+
+					.room-detail__logo 
+						img(src="img/c-logo-1.svg", alt="")
+						img(src="img/c-logo-2.svg", alt="")
+				ul.room-detail__list-2
+					li Дополнительно диван (150*180) или кровать (single 110*200)
+					li В некоторых номерах присутствует балкон*
+					li Эксклюзивные матрасы и постельное белье класса Премиум
+					li Бесплатная минеральная вода для каждого гостя
+					li Чайная станция
+					li Гладильная доска и утюг (по запросу)
+					li Удобный письменный стол
+					li Электронный сейф
+					li Телефон
+					li Ванная комната с душем, фен, косметическое зеркало
+					li Уютный махровый халат, тапочки, полотенца, люксовая косметика для душа
+					li Круглосуточный room service
+					li Возможно размещение гостя с ограниченными возможностями
+
+				.room-detail__list-2-desc 
+					p * уточнить наличие можно по запросу
+
+				.room-detail__gallery.swiper 
+					.swiper-wrapper 
+						.swiper-slide(data-fancybox='gal',data-src="img/j-001.webp") 
+							+picture('j-001','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-002.webp") 
+							+picture('j-002','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-003.webp") 
+							+picture('j-003','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-004.webp") 
+							+picture('j-004','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-005.webp") 
+							+picture('j-005','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-006.webp") 
+							+picture('j-006','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-007.webp") 
+							+picture('j-007','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-008.webp") 
+							+picture('j-008','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-009.webp") 
+							+picture('j-009','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-010.webp") 
+							+picture('j-010','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-011.webp") 
+							+picture('j-011','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-012.webp") 
+							+picture('j-012','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-013.webp") 
+							+picture('j-013','jpg')
+						.swiper-slide(data-fancybox='gal',data-src="img/j-014.webp") 
+							+picture('j-014','jpg')
+
+					.room-detail__gallery-prev
+						<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32.5" cy="34.5" r="31.5" stroke="white" stroke-width="2"/>
+							<path d="M34.0592 28.4971L27.8224 34.7338L34.0592 40.9705" stroke="white" stroke-width="2" stroke-linecap="square"/>
+						</svg>
+
+					.room-detail__gallery-next
+						<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32.5" cy="32.5" r="31.5" transform="matrix(-1 0 0 1 67 2)" stroke="white" stroke-width="2"/>
+							<path d="M32.9408 28.4971L39.1775 34.7338L32.9408 40.9705" stroke="white" stroke-width="2" stroke-linecap="square"/>
+						</svg>
+
+				.room-detail__nav
+					a(href="comfort.html")
+						+picture('k-001','jpg')
+						span 
+							<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.23673 2L2 8.23673L8.23673 14.4735" stroke="white" stroke-width="2" stroke-linecap="square"/>
+							</svg>
+							| COMFORT
+					a(href="junior-suite.html")
+						+picture('js-001','jpg')
+						span 
+							| JUNIOR SUITE
+							<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.00009 2L8.23682 8.23673L2.00009 14.4735" stroke="white" stroke-width="2" stroke-linecap="square"/>
+							</svg>
+
