@@ -27,6 +27,10 @@
 		border-radius: 10px 0 0 0;
 		position: relative;
 		top: -17px;
+
+		@media(max-width:992px) {
+			top: 0;
+		}
 	}
 
 	&__filter {
@@ -170,10 +174,18 @@
 		@include lh(36, 49);
 		margin-bottom: 10px;
 		text-transform: uppercase;
+
+		@media(max-width:420px) {
+			font-size: 24px;
+		}
 	}
 
 	&__desc {
 		margin-bottom: 30px;
+
+		@media(max-width:768px) {
+			display: none;
+		}
 
 		p {
 			font-weight: 300;
@@ -202,13 +214,22 @@
 		font-size: 14px;
 		line-height: 20px;
 		margin-bottom: 10px;
+
+		@media(max-width:500px) {
+			margin-bottom: 4px;
+		}
 	}
 
 	&__parametr-content {
 		font-weight: 700;
 		color: #051317;
 		font-size: 20px;
-		line-height: 26px;
+		@include lh(20, 26);
+
+		@media(max-width:500px) {
+			font-size: 16px;
+			;
+		}
 
 		sup {
 			font-size: 60%;

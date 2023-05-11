@@ -247,6 +247,10 @@
 			transform: translateY(-50%);
 			cursor: pointer;
 
+			@media(max-width:900px) {
+				display: none;
+			}
+
 			circle {
 				transition: fill 0.3s;
 			}
