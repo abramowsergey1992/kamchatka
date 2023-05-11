@@ -7,6 +7,10 @@
 	}
 
 	&__maps {
+		@media(max-width:600px) {
+			margin-top: 100px;
+		}
+
 		background: #fff;
 	}
 
@@ -22,8 +26,19 @@
 		display: flex;
 		flex-direction: row;
 
+		@media(max-width:600px) {
+			flex-wrap: wrap;
+			box-sizing: border-box;
+		}
+
 		@media(max-width:900px) {
 			top: 10px;
+			width: 100%;
+		}
+
+		@media(max-width:600px) {
+			margin-top: -92px;
+			max-width: calc(100% - 0px);
 		}
 
 		&-bg {
@@ -49,13 +64,18 @@
 		transition: color 0.3s;
 
 		@media(max-width:800px) {
-			padding: 5px 10px;
+
 			line-height: 100%;
 			white-space: initial;
 		}
 
 		&._active {
 			color: #fff;
+		}
+
+		@media(max-width:600px) {
+			width: 100%;
+			padding: 10px 5px;
 		}
 
 		@include lh(14, 24);
@@ -83,6 +103,12 @@
 		margin-top: 50px;
 		margin-bottom: 50px;
 		position: relative;
+
+		@media(max-width:800px) {
+			margin-top: 120px !important;
+			margin-bottom: 40px;
+
+		}
 
 		&::before {
 			display: block;

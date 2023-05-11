@@ -21,13 +21,14 @@ $(function () {
 			var myMap = new ymaps.Map("map_1", {
 				center: [52.953556, 158.252907],
 				zoom: 11,
-				controls: [],
-				// behaviors: [
-				// 	"drag",
-				// 	"dblClickZoom",
-				// 	"multiTouch",
-				// 	"rightMouseButtonMagnifier",
-				// ],
+				controls: ["zoomControl"],
+				behaviors: [
+					"ScrollZoom",
+					// 	"drag",
+					// 	"dblClickZoom",
+					// 	"multiTouch",
+					// 	"rightMouseButtonMagnifier",
+				],
 			});
 			var multiRoute = new ymaps.multiRouter.MultiRoute(
 				{
@@ -55,13 +56,14 @@ $(function () {
 			var myMap2 = new ymaps.Map("map_2", {
 				center: [52.953556, 158.252907],
 				zoom: 11,
-				controls: [],
-				// behaviors: [
-				// 	"drag",
-				// 	"dblClickZoom",
-				// 	"multiTouch",
-				// 	"rightMouseButtonMagnifier",
-				// ],
+				controls: ["zoomControl"],
+				behaviors: [
+					"ScrollZoom",
+					// 	"drag",
+					// 	"dblClickZoom",
+					// 	"multiTouch",
+					// 	"rightMouseButtonMagnifier",
+				],
 			});
 			var multiRoute2 = new ymaps.multiRouter.MultiRoute(
 				{

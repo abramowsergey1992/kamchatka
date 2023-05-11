@@ -92,11 +92,9 @@
 		transition: transform 0.3s;
 
 		&:hover {
-			transform: translateX(-50%) translateY(-50%) scale(1.2);
+			transform: translateX(-50%) translateY(-50%) scale(1.1);
 
-			&::before {
-				transform: translateX(-50%) translateY(-50%) scale(1.5);
-			}
+			&::before {}
 		}
 
 		&::before {

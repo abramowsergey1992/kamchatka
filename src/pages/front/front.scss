@@ -74,11 +74,9 @@
 		transition: transform 0.3s;
 
 		&:hover {
-			transform: translateX(-50%) translateY(-50%) scale(1.2);
+			transform: translateX(-50%) translateY(-50%) scale(1.1);
 
-			&::before {
-				transform: translateX(-50%) translateY(-50%) scale(1.5);
-			}
+			&::before {}
 		}
 
 		&::before {
@@ -136,10 +134,10 @@
 	top: 0;
 	margin-left: auto;
 	margin-top: 20px;
-	margin-bottom: calc(100vw * -0.15);
+	margin-bottom: calc(100vw * -0.18);
 
 	@media(max-width:1200px) {
-		margin-bottom: calc(100vw * -0.18);
+		margin-bottom: calc(100vw * -0.21);
 	}
 }
 
@@ -193,4 +191,56 @@
 		content: '';
 		z-index: 3;
 	}
+}
+
+#about-chalet {
+	@media(max-width:800px) {
+		margin-top: 50px;
+	}
+}
+
+.intro__compas-wrap {
+	@media(max-width:800px) {
+		display: none;
+	}
+}
+
+.intro__compas-wrap-mob {
+	display: none;
+
+	@media(max-width:800px) {
+		display: block;
+		max-width: 180px;
+		display: block;
+		margin-left: auto;
+		margin-bottom: -70px;
+		position: relative;
+		z-index: 4;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.about__house {
+	@media(max-width:800px) {
+		&::before {
+			display: none !important;
+		}
+
+		margin-top: -258px;
+
+		img {
+			margin-bottom: -10px;
+			min-height: 615px;
+			margin-left: -901px;
+			max-width: initial;
+			width: initial;
+			object-fit: none;
+			left: 50%;
+			position: relative !important;
+		}
+	}
+
 }

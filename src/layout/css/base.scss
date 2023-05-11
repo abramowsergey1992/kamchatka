@@ -35,7 +35,7 @@ a {
 }
 
 .button:hover {
-	animation: tilt-pulsar 1s linear infinite;
+	// animation: tilt-pulsar 1s linear infinite;
 }
 
 .gradient-text {
@@ -158,7 +158,7 @@ a {
 }
 
 .nav__logo:hover {
-	animation: tilt-shaking 0.6s linear infinite;
+	// animation: tilt-shaking 0.6s linear infinite;
 }
 
 .nav__burger {
@@ -222,8 +222,8 @@ a {
 }
 
 .nav__contact a:hover {
-	color: #051317;
-	transform: scale(1.1);
+	// color: #051317;
+	// transform: scale(1.1);
 }
 
 .nav__contact a:after {
@@ -241,7 +241,7 @@ a {
 }
 
 .nav__contact a:hover:after {
-	width: 110%;
+	// width: 110%;
 }
 
 .nav__bg {
@@ -323,6 +323,8 @@ a {
 
 .header__title {
 	margin-bottom: 10px;
+	line-height: 78%;
+	;
 	max-width: 784px;
 }
 
@@ -375,6 +377,10 @@ a {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end;
+
+	@media(min-width:1100px) {
+		padding-top: 39px;
+	}
 }
 
 .header__swiper-arrow {
@@ -444,18 +450,32 @@ a {
 /* #region intro */
 .intro {
 	min-height: 1101px;
-	height: 1px;
+
 	background-image: url(../images/intro_compass.png);
 	background-repeat: no-repeat;
 	background-position-x: right;
 	background-position-y: 122px;
 }
 
+#intro-img {
+	max-width: 100%;
+	aspect-ratio: 1/1;
+	border-radius: 40px 0px 0px 0px;
+
+	@media(max-width:800px) {
+		max-width: calc(100% - 100px);
+		margin-left: auto;
+		display: block;
+		border-radius: 20px 0px 0px 0px;
+
+	}
+}
+
 .intro .container {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+
 }
 
 .intro .container>p {}
@@ -495,32 +515,87 @@ a {
 	margin-top: 10px;
 }
 
-.intro__img-swiper-box,
-.intro__lscape {
-	position: absolute;
-	// opacity: 0;
+
+.intro__row-2 {
+	display: grid;
+	gap: 90px;
+	position: relative;
 	z-index: 1;
+	grid-template-columns: 50% auto;
+	grid-template-areas: "swiper text" "swiper photo";
+
+	@media(max-width:850px) {
+		gap: 50px;
+		grid-template-columns: 1fr;
+		grid-template-areas: "text" "swiper" "photo";
+	}
+}
+
+.intro__text-wrap {
+	grid-area: text;
+}
+
+.front-page {
+	overflow: hidden;
 }
 
 .intro__lscape {
-	border-radius: 40px 0px 0px 0px;
-	width: 567px;
-	height: 567px;
-	bottom: calc(-390px - 100px);
-	right: 10px;
+	grid-area: photo;
+	position: relative;
+
+	&::before {
+		display: block;
+		content: '';
+		width: 200vmax;
+		background: #f2f2f2;
+		left: -50%;
+		bottom: -2px;
+		height: 70%;
+		transform: translateX(-50%);
+		position: absolute;
+	}
+
+	img {
+		position: relative;
+	}
 }
 
-.intro__img-swiper-box {
-	bottom: calc(-196px - 100px);
-	left: 10px;
-	width: 680px;
-	height: 680px;
+.intro__img-swiper-wrap {
+	grid-area: swiper;
+	min-width: 0;
+	padding-top: 80px;
+
+	@media(max-width:800px) {
+		padding-top: 0px;
+	}
+
+	img {
+		aspect-ratio: 1/1;
+	}
 }
+
+.intro__lscape {
+
+	max-width: 100%;
+
+
+
+}
+
+.intro__img-swiper-wrap {}
+
 
 #intro-img-swiper {
 	border-radius: 40px 0px 0px 0px;
 	width: 100%;
 	height: 100%;
+
+	@media(max-width:800px) {
+		border-radius: 20px 0px 0px 0px;
+		max-width: calc(100% - 100px);
+		margin-right: auto;
+		margin-left: 0;
+	}
 }
 
 .intro__swiper-status {
@@ -549,7 +624,7 @@ a {
 /* #region about */
 .about {
 	position: relative;
-	padding-top: 490px;
+	padding-top: 90px;
 	background: #f2f2f2;
 }
 
@@ -601,8 +676,13 @@ a {
 .about__button {
 	margin-top: 20px;
 	width: 200px;
+	transition: background 0.3s;
 	height: 42px;
 	border: black 1px solid;
+
+	&:hover {
+		background: #fff;
+	}
 }
 
 .about__house {
@@ -611,8 +691,12 @@ a {
 	width: 100vw;
 	position: absolute;
 	bottom: 0px;
+
+
 	/* object-fit: contain; */
+	img {}
 }
+
 
 .about__chalet {
 	z-index: 1;
@@ -623,8 +707,13 @@ a {
 	max-width: 600px;
 	background: #ffffff;
 	border-radius: 50px 0px 0px 0px;
-	padding: 46px 48px 134px 37px;
+	padding: 46px 48px 194px 37px;
 	text-align: start;
+
+	@media(max-width:800px) {
+		width: calc(100% - 20px);
+		border-radius: 20px 0px 0px 0px;
+	}
 }
 
 /* #endregion */
@@ -694,12 +783,36 @@ a {
 	max-width: 892px;
 	max-height: 740px;
 	border-radius: 40px 0px 0px 0px;
+
+	@media(max-width:890px) {
+		border-radius: 20px 0px 0px 0px;
+	}
+
+	.swiper-slide {
+		@media(max-width:890px) {
+			&::before {
+				display: block;
+				content: '';
+				padding-bottom: 77%;
+			}
+		}
+	}
 }
 
 #habbit-img-swiper img {
 	cursor: url(../images/habbit_cursor.svg) 25 25, pointer;
 	object-fit: cover;
 	object-position: center;
+
+	@media(max-width:890px) {
+		aspect-ratio: 3/4;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+
+	}
 }
 
 .habbit-card__info-main {
@@ -707,6 +820,10 @@ a {
 	box-sizing: border-box;
 	padding: 57px 27px 40px 40px;
 	background-color: #f2f2f2;
+
+	@media(max-width:890px) {
+		padding: 30px 20px;
+	}
 }
 
 #habbit-info-swiper {
@@ -815,12 +932,22 @@ a {
 	pointer-events: none;
 }
 
+.habbit-card__info-foot {
+	@media(max-width:890px) {
+		padding: 20px;
+	}
+}
+
 #habbit-swiper-prev,
 #habbit-swiper-next {
 	cursor: pointer;
 	stroke: white;
 	fill: none;
 	transition: all 0.1s ease-in-out;
+
+	@media(max-width:890px) {
+		width: 39px;
+	}
 }
 
 #habbit-swiper-prev:hover,
@@ -1308,8 +1435,16 @@ a {
 
 .creator-box {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	gap: 5px;
+
+	a:hover {
+		svg {
+			path {
+				fill: #e9d3b6;
+			}
+		}
+	}
 }
 
 .creator-box>p {
@@ -1326,10 +1461,7 @@ a {
 @media (max-width: 1450px) {
 
 
-	.intro__img-swiper-box {
-		width: 530px;
-		height: 530px;
-	}
+
 
 	.intro__swiper-status {
 		right: auto;
@@ -1340,10 +1472,6 @@ a {
 		bottom: 18vw;
 	}
 
-	.habbit__head {
-		flex-direction: column;
-		gap: 40px;
-	}
 
 	.habit__title {
 		align-self: flex-start;
@@ -1382,6 +1510,10 @@ a {
 
 @media (max-width: 1100px) {
 
+	.habbit__head {
+		flex-direction: column;
+		gap: 40px;
+	}
 
 	.title {
 		font-size: 112px;
@@ -1413,18 +1545,10 @@ a {
 		line-height: 70px;
 	}
 
-	.intro__img-swiper-box {
-		bottom: calc(-100px - 100px);
-	}
 
-	.intro__lscape {
-		width: 450px;
-		height: 450px;
-		bottom: calc(-225px - 100px);
-	}
 
 	.about {
-		padding-top: 350px;
+		padding-top: 90px;
 	}
 
 	.about__title {
@@ -1529,20 +1653,12 @@ a {
 		line-height: 54px;
 	}
 
-	.intro__img-swiper-box {
-		width: 90%;
-		height: auto;
-		aspect-ratio: 1 / 1;
-	}
 
-	.intro__lscape {
-		width: 60%;
-		height: auto;
-		aspect-ratio: 1 / 1;
-	}
+
+
 
 	.about__logo {
-		width: 30%;
+		width: 169px;
 		height: auto;
 		aspect-ratio: 1 / 1;
 	}
@@ -1728,5 +1844,26 @@ a {
 	.block {
 		position: relative;
 		z-index: 2;
+	}
+}
+
+@media (max-width: 800px) {
+	.about {
+		padding-top: 150px;
+	}
+
+	.about__logo {
+		top: -125px;
+	}
+}
+
+.booking .button,
+.nav__contact .button {
+	background-color: #fff;
+}
+
+.habbit__title {
+	@media(max-width:1470px) {
+		font-size: 120px;
 	}
 }

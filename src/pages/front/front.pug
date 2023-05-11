@@ -63,30 +63,39 @@ block content
 						|  — первый в истории Камчатки пятизвездочный отель
 					.intro__compas-wrap 
 						img(src="img/compas.png", alt="",data-aos="fade-up")
-				p.intro__text#intro-text01(data-aos="fade-up")
-					| Наши традиции гостеприимства прошли путь
+				
+				.intro__row-2
+					.intro__text-wrap
+						p.intro__text#intro-text01(data-aos="fade-up")
+							| Наши традиции гостеприимства прошли путь
 
-					br
-					| от экспедиций первооткрывателей Камчатки
+							br
+							| от экспедиций первооткрывателей Камчатки
 
-					br
-					| до самого восточного пятизвездочного отеля России…
+							br
+							| до самого восточного пятизвездочного отеля России…
 
-				p.intro__text#intro-text02(data-aos="fade-up") Камчатка Шале 5* — вершина освоения полуострова. Гости отеля прикоснутся к наследию Камчатки, открывая для себя уникальную природу края и наслаждаясь безупречным сервисом.
+						
+						p.intro__text#intro-text02(data-aos="fade-up") Камчатка Шале 5* — вершина освоения полуострова. Гости отеля прикоснутся к наследию Камчатки, открывая для себя уникальную природу края и наслаждаясь безупречным сервисом.
 					
-				.intro__img-swiper-box#intro-img-swiper-box(data-aos="fade-up")
-					.swiper#intro-img-swiper
-						.swiper-wrapper
-							.swiper-slide
-							img(src='img/intro_img01.webp', alt='landscape').swiper-slide
-							img(src='img/intro_img01.webp', alt='landscape').swiper-slide
-								
-								
-					.intro__swiper-status
-						p.gradient-text#intro-cur-slide 01
-						hr
-						p.gradient-text#intro-count-slides 08
-				img.intro__lscape#intro-img(src='img/intro_img02.webp', alt='landscape',data-aos="fade-up")
+					.intro__img-swiper-wrap
+						.intro__compas-wrap-mob
+							img(src="img/compas.png", alt="",data-aos="fade-up")
+				
+						.intro__img-swiper-box#intro-img-swiper-box(data-aos="fade-up")
+							.swiper#intro-img-swiper
+								.swiper-wrapper
+									.swiper-slide
+									img(src='img/intro_img01.webp', alt='landscape').swiper-slide
+									img(src='img/intro_img01.webp', alt='landscape').swiper-slide
+										
+										
+							.intro__swiper-status
+								p.gradient-text#intro-cur-slide 01
+								hr
+								p.gradient-text#intro-count-slides 08
+					.intro__lscape
+						img#intro-img(src='img/intro_img02.webp', alt='landscape',data-aos="fade-up")
 		section.about#about
 			.container
 				.about__logo#about-trigger(data-aos="fade-up")

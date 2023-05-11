@@ -40,14 +40,17 @@ block content
 					.about-text-1__row
 						.about-text-1__left(data-aos="fade-up")
 							p Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые взыскательные вкусы и высокие ожидания. Часть номеров выполнены по образу корабельных кают великих первооткрывателей и исследователей Камчатки — «Беринг», «Дежнев», «Атласов», «Крашенинников»
+							.about-text-1__mob
+								p Никогда ещё дикая природа края не была так смиренна, как когда смотришь на неё из окна отеля Kamchatka Chalet 5*
 							.about-text-1__slider.swiper 
 								.swiper-wrapper
 									.swiper-slide
 										+picture('about-2','jpg')
 									
 								.about-text-1__slider-pagi
-						.about-text-1__right(data-aos="fade-up") 
-							p Никогда ещё дикая природа края не была так смиренна, как когда смотришь на неё из окна отеля Kamchatka Chalet 5*
+						.about-text-1__right(data-aos="fade-up")
+							.about-text-1__desc
+								p Никогда ещё дикая природа края не была так смиренна, как когда смотришь на неё из окна отеля Kamchatka Chalet 5*
 							+picture('about-3','jpg').about-text-1__img
 				.about-text-2.block(data-aos="fade-up")
 					.h1 Наследие 
@@ -61,14 +64,6 @@ block content
 			.block(data-aos="fade-up")
 				.about-full-slider.swiper
 					.swiper-wrapper 
-						.swiper-slide
-							+picture('about-4','jpg')
-						.swiper-slide
-							+picture('about-4','jpg')
-						.swiper-slide
-							+picture('about-4','jpg')
-						.swiper-slide
-							+picture('about-4','jpg')
 						.swiper-slide
 							+picture('about-4','jpg')
 					.container 	
@@ -101,17 +96,13 @@ block content
 				.about-photos.swiper
 					.swiper-wrapper 
 						.swiper-slide 
-							a(href="img/about-5.jpg",data-fancybox="gallery")
-								+picture('about-5','jpg')
+							+picture('about-5','jpg')
 						.swiper-slide 
-							a(href="img/about-6.jpg",data-fancybox="gallery")
-								+picture('about-6','jpg')
+							+picture('about-6','jpg')
 						.swiper-slide 
-							a(href="img/about-7.jpg",data-fancybox="gallery")
-								+picture('about-7','jpg')
+							+picture('about-7','jpg')
 						.swiper-slide 
-							a(href="img/about-8.jpg",data-fancybox="gallery")
-								+picture('about-8','jpg')
+							+picture('about-8','jpg')
 
 					.about-photos__gallery-prev
 						<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
