@@ -275,3 +275,15 @@
 		line-height: 55px;
 	}
 }
+
+.habbit-card__desc {
+	@media(max-width:992px) {
+		display: none;
+	}
+}
+
+.habbit-card__lvl {
+	@media(max-width:992px) {
+		margin-bottom: 10px;
+	}
+}
