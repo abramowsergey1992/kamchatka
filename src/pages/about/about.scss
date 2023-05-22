@@ -197,7 +197,7 @@
 		}
 
 		img {
-			margin-top: 204px;
+			margin-top: 104px;
 			width: 100%;
 
 			@media(max-width:710px) {
@@ -219,13 +219,16 @@
 		margin-bottom: 28px;
 	}
 
-	p {}
+	p:not(:last-child) {
+		margin-bottom: 20px;
+	}
 
 	&__row {
 		display: grid;
 		grid-template-columns: auto 46%;
 		gap: 50px;
-		align-items: end;
+
+
 
 		@media(max-width:710px) {
 			gap: 0px;

@@ -1,0 +1,42 @@
+extends ../../layout/layout
+
+block content
+	section.tours-page
+		.container 
+			+breadcrumb(['Главная'], 'Туры')
+			
+			h1.h1 Туры
+			p Расстояния между локациями на Камчатке иногда могут быть внушительными, и то, как их преодолеть — зависит от нас. Мы всегда выбираем максимально удобный транспорт вместо популярных в регионе так называемых «вахтовок» — в них некомфортно и даже не всегда безопасно перемещаться по бездорожью.
+			.tours-grid
+				.tours-preview(data-tourslide="1") 
+					.tours-preview__bg 
+						+picture('t-1','jpg')
+					.tours-preview__content
+						.tours-preview__title ОТКРЫВАЯ КАМЧАТКУ
+						p Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые
+						button(type="button").tours-preview__btn Подробнее о туре
+				
+				.tours-preview(data-tourslide="2") 
+					.tours-preview__bg 
+						+picture('t-2','jpg')
+					.tours-preview__content
+						.tours-preview__title паря над жерлом
+						p Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые
+						button(type="button").tours-preview__btn Подробнее о туре
+				
+				.tours-preview(data-tourslide="3") 
+					.tours-preview__bg 
+						+picture('t-3','jpg')
+					.tours-preview__content
+						.tours-preview__title СИЛА ПРИРОДЫ
+						p Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые
+						button(type="button").tours-preview__btn Подробнее о туре
+				
+				.tours-preview(data-tourslide="4") 
+					.tours-preview__bg 
+						+picture('t-4','jpg')
+					.tours-preview__content
+						.tours-preview__title в поисках горбатого кита
+						p Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые
+						button(type="button").tours-preview__btn Подробнее о туре
+				

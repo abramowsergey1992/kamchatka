@@ -1,0 +1,31 @@
+extends ../../layout/layout
+
+block content
+	section.service-page
+		.container 
+			+breadcrumb(['Главная'], 'Услуги')
+			
+			h1.h1 Услуги
+			p Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые взыскательные вкусы и высокие ожидания. Часть номеров выполнены по образу корабельных кают великих первооткрывателей и исследователей Камчатки — «Беринг», «Дежнев», «Атласов», «Крашенинников»
+
+			.service-grid
+				.service-preview(data-serviceslide="1") 
+					.service-preview__bg 
+						+picture('ser-1','jpg')
+					.service-preview__title Термальный бассейн
+				.service-preview(data-serviceslide="2") 
+					.service-preview__bg 
+						+picture('ser-2','jpg')
+					.service-preview__title Банный комплекс
+				.service-preview(data-serviceslide="3") 
+					.service-preview__bg 
+						+picture('ser-3','jpg')
+					.service-preview__title Спа-кабинеты
+				.service-preview(data-serviceslide="4") 
+					.service-preview__bg 
+						+picture('ser-4','jpg')
+					.service-preview__title Тренажёрный зал
+				.service-preview(data-serviceslide="5") 
+					.service-preview__bg 
+						+picture('ser-5','jpg')
+					.service-preview__title Икорная лавка

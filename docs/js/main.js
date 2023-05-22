@@ -1,4 +1,93 @@
 $(function () {
+	if ($(".aboutp").length) {
+		$(".aboutp__down").click(function () {
+			$("html, body").animate(
+				{ scrollTop: $(".whitebox").offset().top - 60 },
+				700
+			);
+		});
+		const swiper = new Swiper($(".about-full-slider")[0], {
+			loop: true,
+			spaceBetween: 15,
+			effect: "fade",
+
+			centeredSlides: true,
+			slidesPerView: "auto",
+			loopedSlides: 0,
+			navigation: {
+				nextEl: $(".about-full-slider__nav-next")[0],
+				prevEl: $(".about-full-slider__nav-prev")[0],
+			},
+			on: {
+				init: function (swiper) {
+					$(".about-full-slider__pagi").html(
+						`<span>${String(this.realIndex + 1).padStart(
+							2,
+							"0"
+						)}</span><span></span><span>${String(
+							this.slides.length
+						).padStart(2, "0")}</span>`
+					);
+				},
+				slideChange: function () {
+					$(".about-full-slider__pagi").html(
+						`<span>${String(this.realIndex + 1).padStart(
+							2,
+							"0"
+						)}</span><span></span><span>${String(
+							this.slides.length
+						).padStart(2, "0")}</span>`
+					);
+				},
+			},
+		});
+
+		const aboutPhotos = new Swiper($(".about-photos")[0], {
+			loop: true,
+			spaceBetween: 15,
+			preventClicks: false,
+			preventClicksPropagation: false,
+			centeredSlides: true,
+			slidesPerView: "auto",
+			loopedSlides: 10,
+			navigation: {
+				nextEl: $(".about-photos__gallery-next")[0],
+				prevEl: $(".about-photos__gallery-prev")[0],
+			},
+		});
+		// const aboutText1Slider = new Swiper($(".about-text-1__slider")[0], {
+		// 	loop: true,
+		// 	autoplay: {
+		// 		delay: 5000,
+		// 	},
+		// 	speed: 1000,
+		// 	on: {
+		// 		init: function (swiper) {
+		// 			$(".about-text-1__slider-pagi").html(
+		// 				`<span>${String(this.realIndex + 1).padStart(
+		// 					2,
+		// 					"0"
+		// 				)}</span><span></span><span>${String(
+		// 					this.slides.length
+		// 				).padStart(2, "0")}</span>`
+		// 			);
+		// 		},
+		// 		slideChange: function () {
+		// 			$(".about-text-1__slider-pagi").html(
+		// 				`<span>${String(this.realIndex + 1).padStart(
+		// 					2,
+		// 					"0"
+		// 				)}</span><span></span><span>${String(
+		// 					this.slides.length
+		// 				).padStart(2, "0")}</span>`
+		// 			);
+		// 		},
+		// 	},
+		// });
+	}
+});
+
+$(function () {
 	ymaps.ready(function () {
 		createMap1();
 	});
@@ -102,94 +191,7 @@ $(function () {
 	}
 });
 
-$(function () {
-	if ($(".aboutp").length) {
-		$(".aboutp__down").click(function () {
-			$("html, body").animate(
-				{ scrollTop: $(".whitebox").offset().top - 60 },
-				700
-			);
-		});
-		const swiper = new Swiper($(".about-full-slider")[0], {
-			loop: true,
-			spaceBetween: 15,
-			effect: "fade",
-
-			centeredSlides: true,
-			slidesPerView: "auto",
-			loopedSlides: 0,
-			navigation: {
-				nextEl: $(".about-full-slider__nav-next")[0],
-				prevEl: $(".about-full-slider__nav-prev")[0],
-			},
-			on: {
-				init: function (swiper) {
-					$(".about-full-slider__pagi").html(
-						`<span>${String(this.realIndex + 1).padStart(
-							2,
-							"0"
-						)}</span><span></span><span>${String(
-							this.slides.length
-						).padStart(2, "0")}</span>`
-					);
-				},
-				slideChange: function () {
-					$(".about-full-slider__pagi").html(
-						`<span>${String(this.realIndex + 1).padStart(
-							2,
-							"0"
-						)}</span><span></span><span>${String(
-							this.slides.length
-						).padStart(2, "0")}</span>`
-					);
-				},
-			},
-		});
-
-		const aboutPhotos = new Swiper($(".about-photos")[0], {
-			loop: true,
-			spaceBetween: 15,
-			preventClicks: false,
-			preventClicksPropagation: false,
-			centeredSlides: true,
-			slidesPerView: "auto",
-			loopedSlides: 10,
-			navigation: {
-				nextEl: $(".about-photos__gallery-next")[0],
-				prevEl: $(".about-photos__gallery-prev")[0],
-			},
-		});
-		// const aboutText1Slider = new Swiper($(".about-text-1__slider")[0], {
-		// 	loop: true,
-		// 	autoplay: {
-		// 		delay: 5000,
-		// 	},
-		// 	speed: 1000,
-		// 	on: {
-		// 		init: function (swiper) {
-		// 			$(".about-text-1__slider-pagi").html(
-		// 				`<span>${String(this.realIndex + 1).padStart(
-		// 					2,
-		// 					"0"
-		// 				)}</span><span></span><span>${String(
-		// 					this.slides.length
-		// 				).padStart(2, "0")}</span>`
-		// 			);
-		// 		},
-		// 		slideChange: function () {
-		// 			$(".about-text-1__slider-pagi").html(
-		// 				`<span>${String(this.realIndex + 1).padStart(
-		// 					2,
-		// 					"0"
-		// 				)}</span><span></span><span>${String(
-		// 					this.slides.length
-		// 				).padStart(2, "0")}</span>`
-		// 			);
-		// 		},
-		// 	},
-		// });
-	}
-});
+$(function () {});
 
 Fancybox.bind("[data-fancybox]", {});
 
@@ -214,6 +216,8 @@ $(function () {
 	}
 });
 
+$(function(){})
+$(function(){})
 $(function () {
 	$(".rooms__filter").click(function () {
 		$(".rooms__filter").removeClass("_active");
@@ -232,8 +236,6 @@ $(function () {
 		}
 	});
 });
-
-$(function () {});
 
 $(function () {
 	AOS.init({
@@ -853,5 +855,55 @@ $(function () {
 			}, 730);
 		}
 		return false;
+	});
+});
+
+$(function () {
+	const service = new Swiper(".p-slider-service", {
+		speed: 400,
+		loop: true,
+		shortSwipes: false,
+		// navigation: {
+		// 	nextEl: ".p-slider-service__nav-next",
+		// 	prevEl: ".p-slider-service__nav-prev",
+		// },
+	});
+	$(".p-slider-service__nav-next").click(function () {
+		service.slideNext();
+	});
+	$(".p-slider-service__nav-prev").click(function () {
+		service.slidePrev();
+	});
+	$("[data-serviceslide]").click(function () {
+		let slide = $(this).data("serviceslide");
+		service.slideTo(slide);
+		$("#popup-service").fadeIn();
+		$("html").addClass("_no-scroll");
+	});
+	const tours = new Swiper(".p-slider-tour", {
+		speed: 400,
+		loop: true,
+		shortSwipes: false,
+		// navigation: {
+		// 	nextEl: ".p-slider-service__nav-next",
+		// 	prevEl: ".p-slider-service__nav-prev",
+		// },
+	});
+	$(".p-slider-tour__nav-next").click(function () {
+		tours.slideNext();
+	});
+	$(".p-slider-tour__nav-prev").click(function () {
+		sertoursice.slidePrev();
+	});
+	$("[data-tourslide]").click(function () {
+		let slide = $(this).data("tourslide");
+		tours.slideTo(slide);
+		$("#popup-tours").fadeIn();
+		$("html").addClass("_no-scroll");
+	});
+
+	$(".popup-sl__close").click(function () {
+		$(this).closest(".popup-sl").fadeOut();
+		$("html").removeClass("_no-scroll");
 	});
 });

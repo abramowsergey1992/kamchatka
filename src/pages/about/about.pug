@@ -12,24 +12,36 @@ block content
 							<circle cx="98" cy="98" r="97" stroke="white" stroke-width="2"/>
 							<path d="M98 64L98 131M98 131C98 126.45 99.76 116.548 110 116.548M98 131C98 126.45 96.24 116.548 86 116.548" stroke=" " stroke-width="2"/>
 						</svg>
-				.booking
-					.booking__item
-						p Заезд
-						span#booking__check-in 20.06.23
-						div ⌵
-					img.booking__sep(src='img/head_booking-sep.svg', alt='sep')
-					.booking__item
-						p Выезд
-						span#booking__check-out 20.06.23
-						div ⌵
-					img.booking__sep(src='img/head_booking-sep.svg', alt='sep')
-					.booking__item
-						p Гости (в т.ч. дети)
-						span#booking__guest 2 человека
-						div ⌵
-					img.booking__sep(src='img/head_booking-sep.svg', alt='sep')
-					button.button
-						span.gradient-text Забронировать
+				.booking-form
+					<div id='block-search'>
+						<div id='tl-search-form' class='tl-container'>
+							<noindex><a href='https://www.travelline.ru/products/tl-hotel/' rel='nofollow' target='_blank'>TravelLine</a></noindex>
+						</div>
+					</div>
+					script.
+						(function(w) {
+							var q = [
+								['setContext', 'TL-INT-kamchatkachalet_2023-04-13', 'ru'],
+								['embed', 'search-form', {
+									container: 'tl-search-form'
+								}]
+							];
+							var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];
+							var t = w.travelline = (w.travelline || {}),
+								ti = t.integration = (t.integration || {});
+							ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+							if (!ti.__loader) {
+							ti.__loader = true;
+							var d=w.document,c=d.getElementsByTagName("head")[0]||d.getElementsByTagName("body")[0];
+							function e(s,f) {return function() {w.TL||(c.removeChild(s),f())}}
+							(function l(h) {
+								if (0===h.length) return; var s=d.createElement("script");
+								s.isReloadFuncSet = "set";s.type="text/javascript";s.async=!0;s.src="https://"+h[0]+"/integration/loader.js";
+								s.onerror=s.onload=e(s,function(){l(h.slice(1,h.length))});c.appendChild(s)
+							})(h);
+						}
+						})(window);
+					</script>
 			.aboutp__bg
 				+picture('about-1','jpg')
 			.whitebox
