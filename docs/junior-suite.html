@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="css/base.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/vendor.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+<!-- start TL head script -->
+    <script type="text/javascript">
+      (function(w) {
+      	var q = [
+      		['setContext', 'TL-INT-kamchatkachalet_2023-04-13', 'ru']
+      	];
+      	var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];
+      	var t = w.travelline = (w.travelline || {}),
+      		ti = t.integration = (t.integration || {});
+      	ti.__cq = ti.__cq? ti.__cq.concat(q) : q;
+      if (!ti.__loader) {
+      	ti.__loader = true;
+      	var d=w.document,c=d.getElementsByTagName("head")[0]||d.getElementsByTagName("body")[0];
+      	function e(s,f) {return function() {w.TL||(c.removeChild(s),f())}}
+      	(function l(h) {
+      		if (0===h.length) return; var s=d.createElement("script");
+      		s.isReloadFuncSet = "set";s.type="text/javascript";s.async=!0;s.src="https://"+h[0]+"/integration/loader.js";
+      		s.onerror=s.onload=e(s,function(){l(h.slice(1,h.length))});c.appendChild(s)
+      	})(h);
+      }
+      })(window);
+    </script></script>
+<!-- end TL head script -->
   </head>
   <body>
     <nav class="nav" id="nav">
@@ -18,7 +41,7 @@
           <div></div>
         </div>
         <div class="nav__contact"><a href="tel:+79140202121">+7 914 020 2121</a>
-          <button class="button"><span class="gradient-text">Забронировать</span></button>
+          <button class="button" onclick="location.href='/booking.html'"><span class="gradient-text">Забронировать</span></button>
         </div>
       </div>
       <div class="nav__menu" style="display: none">

@@ -287,3 +287,31 @@
 		margin-bottom: 10px;
 	}
 }
+
+.button {
+	box-sizing: border-box;
+}
+
+#habbit-img-swiper img {
+	height: 100%;
+}
+
+#habbit-img-swiper {
+	max-height: initial;
+}
+
+.habbit-card__attr-item sup {
+	font-size: 60%;
+	transform: translateY(-30%);
+	display: inline-block;
+}
+
+.habbit-card__slide {
+	height: auto !important;
+	display: flex;
+	flex-direction: column;
+}
+
+.habbit-card__slide .habbit-card__attr {
+	margin-bottom: auto;
+}

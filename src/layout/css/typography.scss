@@ -34,3 +34,25 @@
 			font-size: 30px;
 		}
 	}
+
+	h3,
+	.h3 {
+		font-family: 'Cormorant Garamond';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 40px;
+		text-transform: uppercase;
+		@include lh(40, 52);
+
+		@media(max-width:992px) {
+			font-size: 40px;
+		}
+
+		@media(max-width:500px) {
+			font-size: 39px;
+		}
+
+		@media(max-width:420px) {
+			font-size: 30px;
+		}
+	}

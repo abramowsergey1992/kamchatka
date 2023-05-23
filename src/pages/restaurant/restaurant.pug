@@ -1,0 +1,194 @@
+extends ../../layout/layout
+
+block content
+	section.restaurant-page
+		.container 	
+			.restaurant-top
+				+breadcrumb(['Главная'], 'Ресторан Беринг')
+				h1 Ресторан «беринг»
+				.restaurant-top__row
+					.restaurant-top__left
+						
+						p  Гастрономическое путешествие для свободных духом
+					.restaurant-top__down
+						<svg   viewBox="0 0 196 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="98" cy="98" r="97" stroke="white" stroke-width="2"/>
+							<path d="M98 64L98 131M98 131C98 126.45 99.76 116.548 110 116.548M98 131C98 126.45 96.24 116.548 86 116.548" stroke=" " stroke-width="2"/>
+						</svg>
+				.restaurant-top__img
+					+picture('rest-1','jpg')
+					.restaurant-top__img-text(data-aos="fade-up") В 1697 году
+			.restaurant-text(data-aos="fade-up")
+				
+				.restaurant-text__headline.h2 на Камчатку была направлена первая экспедиция под руководством Витуса Беринга
+				.restaurant-text__row
+					.restaurant-text__left(data-aos="fade-up")
+						p Гостей отеля ждут тридцать два роскошных номера, включая два номера класса «люкс», способных удовлетворить самые взыскательные вкусы и высокие ожидания. Часть номеров выполнены по образу корабельных кают великих первооткрывателей и исследователей Камчатки — «Беринг», «Дежнев», «Атласов», «Крашенинников»
+						.restaurant-text__mob
+							p Меню ресторана «Беринг» — это экспедиция по водам Камчатки и истории освоения края. В основе меню — главные морские открытия последних столетий. 
+						+picture('rest-3','jpg').restaurant-text__img
+								
+							
+					.restaurant-text__right(data-aos="fade-up")
+						.restaurant-text__desctop
+							p Меню ресторана «Беринг» — это экспедиция по водам Камчатки и истории освоения края. В основе меню — главные морские открытия последних столетий. 
+						+picture('rest-3','jpg').restaurant-text__img
+				
+			.whitebox
+				.restaurant-map-text(data-aos="fade-up")
+					.restaurant-map-text__bg 
+						+picture('rest-map','png')
+					.restaurant-map-text__row
+						.restaurant-map-text__text
+							.h3 «Главным занятием жителей является рыболовство, так как рыба составляет существенную и единственную их пищу.  Рыба у них поедается за завтраком, рыба идет на обед, с рыбой пьётся чай,  и рыба же составляет ужин»,
+						.restaurant-map-text__logo 
+							img(src="img/r-logo-1.svg", alt="")
+							img(src="img/r-logo-2.svg", alt="")
+					.restaurant-map-text__r-text 
+						p — писал в начале XX века исследователь Камчатки Владимир Тюшов. Свои исследования он изложил в книге 
+							br
+							| «По западному берегу Камчатки», которая вышла в свет  в 1906 году.
+				.restaurant-menu-wrap.block(data-aos="fade-up") 
+					.restaurant-menu
+						.restaurant-menu__slider.swiper 
+							.swiper-wrapper
+								.swiper-slide.restaurant-menu__slide 
+									.restaurant-menu__photo 
+										+picture('rest-4','jpg')
+									.restaurant-menu__content
+										.restaurant-menu__title Камчатский краб 
+										.restaurant-menu__desc 	
+											p Открыт в 1896 году, промысел с конца XIX века
+												br
+												br
+												| В 1896 году научный экспедиционный корабль «Витязь» под командованием Бориса Вильде обнаружил камчатского краба в Чукотском море и привез несколько экземпляров в Москву для исследования. Сегодня камчатский краб — один из самых ценных и дорогих видов морепродуктов в мире.
+								
+								.swiper-slide.restaurant-menu__slide 
+									.restaurant-menu__photo 
+										+picture('rest-5','jpg')
+									.restaurant-menu__content
+										.restaurant-menu__title Камчатский краб 
+										.restaurant-menu__desc 	
+											p Открыт в 1896 году, промысел с конца XIX века
+												br
+												br
+												| В 1896 году научный экспедиционный корабль «Витязь» под командованием Бориса Вильде обнаружил камчатского краба в Чукотском море и привез несколько экземпляров в Москву для исследования. Сегодня камчатский краб — один из самых ценных и дорогих видов морепродуктов в мире.
+								.swiper-slide.restaurant-menu__slide 
+									.restaurant-menu__photo 
+										+picture('rest-4','jpg')
+									.restaurant-menu__content
+										.restaurant-menu__title Камчатский краб 
+										.restaurant-menu__desc 	
+											p Открыт в 1896 году, промысел с конца XIX века
+												br
+												br
+												| В 1896 году научный экспедиционный корабль «Витязь» под командованием Бориса Вильде обнаружил камчатского краба в Чукотском море и привез несколько экземпляров в Москву для исследования. Сегодня камчатский краб — один из самых ценных и дорогих видов морепродуктов в мире.
+								
+								.swiper-slide.restaurant-menu__slide 
+									.restaurant-menu__photo 
+										+picture('rest-5','jpg')
+									.restaurant-menu__content
+										.restaurant-menu__title Камчатский краб 
+										.restaurant-menu__desc 	
+											p Открыт в 1896 году, промысел с конца XIX века
+												br
+												br
+												| В 1896 году научный экспедиционный корабль «Витязь» под командованием Бориса Вильде обнаружил камчатского краба в Чукотском море и привез несколько экземпляров в Москву для исследования. Сегодня камчатский краб — один из самых ценных и дорогих видов морепродуктов в мире.
+								.swiper-slide.restaurant-menu__slide 
+									.restaurant-menu__photo 
+										+picture('rest-4','jpg')
+									.restaurant-menu__content
+										.restaurant-menu__title Камчатский краб 
+										.restaurant-menu__desc 	
+											p Открыт в 1896 году, промысел с конца XIX века
+												br
+												br
+												| В 1896 году научный экспедиционный корабль «Витязь» под командованием Бориса Вильде обнаружил камчатского краба в Чукотском море и привез несколько экземпляров в Москву для исследования. Сегодня камчатский краб — один из самых ценных и дорогих видов морепродуктов в мире.
+								
+								.swiper-slide.restaurant-menu__slide 
+									.restaurant-menu__photo 
+										+picture('rest-5','jpg')
+									.restaurant-menu__content
+										.restaurant-menu__title Камчатский краб 
+										.restaurant-menu__desc 	
+											p Открыт в 1896 году, промысел с конца XIX века
+												br
+												br
+												| В 1896 году научный экспедиционный корабль «Витязь» под командованием Бориса Вильде обнаружил камчатского краба в Чукотском море и привез несколько экземпляров в Москву для исследования. Сегодня камчатский краб — один из самых ценных и дорогих видов морепродуктов в мире.
+								.swiper-slide.restaurant-menu__slide 
+									.restaurant-menu__photo 
+										+picture('rest-4','jpg')
+									.restaurant-menu__content
+										.restaurant-menu__title Камчатский краб 
+										.restaurant-menu__desc 	
+											p Открыт в 1896 году, промысел с конца XIX века
+												br
+												br
+												| В 1896 году научный экспедиционный корабль «Витязь» под командованием Бориса Вильде обнаружил камчатского краба в Чукотском море и привез несколько экземпляров в Москву для исследования. Сегодня камчатский краб — один из самых ценных и дорогих видов морепродуктов в мире.
+								
+								.swiper-slide.restaurant-menu__slide 
+									.restaurant-menu__photo 
+										+picture('rest-5','jpg')
+									.restaurant-menu__content
+										.restaurant-menu__title Камчатский краб 
+										.restaurant-menu__desc 	
+											p Открыт в 1896 году, промысел с конца XIX века
+												br
+												br
+												| В 1896 году научный экспедиционный корабль «Витязь» под командованием Бориса Вильде обнаружил камчатского краба в Чукотском море и привез несколько экземпляров в Москву для исследования. Сегодня камчатский краб — один из самых ценных и дорогих видов морепродуктов в мире.
+							.restaurant-menu__pagi
+						
+						.restaurant-menu__nav-prev 
+							<svg viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="24.375" cy="26.25" r="23.875" stroke="white"/>
+								<path d="M25.5442 21.7475L20.8667 26.425L25.5442 31.1026" stroke="white" stroke-linecap="square"/>
+							</svg>
+						.restaurant-menu__nav-next
+							<svg viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="24.375" cy="24.375" r="23.875" transform="matrix(-1 0 0 1 50.25 1.875)" stroke="white"/>
+								<path d="M24.7058 21.7475L29.3833 26.425L24.7058 31.1026" stroke="white" stroke-linecap="square"/>
+							</svg>
+				
+			.rest-about.block
+				.h1.rest-about__title О ресторане
+				.rest-about__img
+					+picture('rest-6','jpg')
+				.h2 Именно локальные специалитеты делают кухню Камчатки такой особенной
+				.rest-about__row
+					.rest-about__left
+						a(href="#").button.rest-about__menu 
+							span.gradient-text Скачать меню 
+							<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 13.88L7.75 10.76M11 13.88L14 10.76M11 13.88V4M17 10.24V17H5V10.24" stroke="black" stroke-width="1.5"/>
+							</svg>
+
+					.rest-about__right
+						p В меню ресторана «Беринг» представлено все, чем богат край: лосось, камчатский краб, гребешок, креветки, мидии и другая свежевыловленная рыба и морепродукты. Мы используем только натуральные ингредиенты, сезонные овощи и фрукты, выращенные  в естественном грунте, лесные травы и ягоды. И, конечно, гастрономическое путешествие было бы неполным без изысканной атмосферы и вида на вулканы, открывающихся из панорамных окон.
+			
+
+			.block(data-aos="fade-up")
+				.rest-photos.swiper
+					.swiper-wrapper 
+						.swiper-slide 
+							+picture('rs-3','jpg')
+						.swiper-slide 
+							+picture('rs-4','jpg')
+						.swiper-slide 
+							+picture('rs-5','jpg')
+						.swiper-slide 
+							+picture('rs-1','jpg')
+						.swiper-slide 
+							+picture('rs-2','jpg')
+		
+
+					.rest-photos__gallery-prev
+						<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32.5" cy="34.5" r="31.5" stroke="white" stroke-width="2"/>
+							<path d="M34.0592 28.4971L27.8224 34.7338L34.0592 40.9705" stroke="white" stroke-width="2" stroke-linecap="square"/>
+						</svg>
+
+					.rest-photos__gallery-next
+						<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32.5" cy="32.5" r="31.5" transform="matrix(-1 0 0 1 67 2)" stroke="white" stroke-width="2"/>
+							<path d="M32.9408 28.4971L39.1775 34.7338L32.9408 40.9705" stroke="white" stroke-width="2" stroke-linecap="square"/>
+						</svg>

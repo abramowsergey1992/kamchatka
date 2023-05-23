@@ -88,6 +88,90 @@ $(function () {
 });
 
 $(function () {
+	$(".restaurant-top__down").click(function () {
+		$("html, body").animate(
+			{ scrollTop: $(".restaurant-top__img").offset().top + 100 },
+			700
+		);
+	});
+	if ($(".rest-photos").length) {
+		const restPhotos = new Swiper($(".rest-photos")[0], {
+			loop: true,
+			spaceBetween: 15,
+			preventClicks: false,
+			preventClicksPropagation: false,
+			centeredSlides: true,
+			slidesPerView: "auto",
+			loopedSlides: 10,
+			navigation: {
+				nextEl: $(".rest-photos__gallery-next")[0],
+				prevEl: $(".rest-photos__gallery-prev")[0],
+			},
+		});
+	}
+	if ($(".restaurant-menu__slider").length) {
+		let menu = new Swiper(".restaurant-menu__slider", {
+			speed: 400,
+			spaceBetween: 100,
+			slidesPerView: 1,
+			mousewheel: {
+				forceToAxis: true,
+			},
+			navigation: {
+				nextEl: ".restaurant-menu__nav-next",
+				prevEl: ".restaurant-menu__nav-prev",
+			},
+		});
+	}
+});
+
+Fancybox.bind("[data-fancybox]", {});
+
+$(function () {
+	$(".room-detail__top-down").click(function () {
+		$("html, body").animate({ scrollTop: window.innerHeight }, 400);
+	});
+	if ($(".room-detail__gallery").length) {
+		const swiper = new Swiper($(".room-detail__gallery")[0], {
+			loop: true,
+			spaceBetween: 15,
+			preventClicks: false,
+			preventClicksPropagation: false,
+			centeredSlides: true,
+			slidesPerView: "auto",
+			loopedSlides: 10,
+			navigation: {
+				nextEl: $(".room-detail__gallery-next")[0],
+				prevEl: $(".room-detail__gallery-prev")[0],
+			},
+		});
+	}
+});
+
+$(function(){})
+$(function(){})
+$(function () {
+	$(".rooms__filter").click(function () {
+		$(".rooms__filter").removeClass("_active");
+		$(this).addClass("_active");
+		let f = $(this).data("filter");
+		if (f == "all") {
+			$(".room").stop().slideDown();
+		} else {
+			$(".room").each(function () {
+				if (f == $(this).data("filter")) {
+					$(this).stop().slideDown();
+				} else {
+					$(this).stop().slideUp();
+				}
+			});
+		}
+	});
+});
+
+$(function () {});
+
+$(function () {
 	ymaps.ready(function () {
 		createMap1();
 	});
@@ -191,52 +275,6 @@ $(function () {
 	}
 });
 
-$(function () {});
-
-Fancybox.bind("[data-fancybox]", {});
-
-$(function () {
-	$(".room-detail__top-down").click(function () {
-		$("html, body").animate({ scrollTop: window.innerHeight }, 400);
-	});
-	if ($(".room-detail__gallery").length) {
-		const swiper = new Swiper($(".room-detail__gallery")[0], {
-			loop: true,
-			spaceBetween: 15,
-			preventClicks: false,
-			preventClicksPropagation: false,
-			centeredSlides: true,
-			slidesPerView: "auto",
-			loopedSlides: 10,
-			navigation: {
-				nextEl: $(".room-detail__gallery-next")[0],
-				prevEl: $(".room-detail__gallery-prev")[0],
-			},
-		});
-	}
-});
-
-$(function(){})
-$(function(){})
-$(function () {
-	$(".rooms__filter").click(function () {
-		$(".rooms__filter").removeClass("_active");
-		$(this).addClass("_active");
-		let f = $(this).data("filter");
-		if (f == "all") {
-			$(".room").stop().slideDown();
-		} else {
-			$(".room").each(function () {
-				if (f == $(this).data("filter")) {
-					$(this).stop().slideDown();
-				} else {
-					$(this).stop().slideUp();
-				}
-			});
-		}
-	});
-});
-
 $(function () {
 	AOS.init({
 		// Global settings:
@@ -257,6 +295,56 @@ $(function () {
 		once: true, // whether animation should happen only once - while scrolling down
 		mirror: false, // whether elements should animate out while scrolling past them
 		anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+	});
+});
+
+$(function () {
+	const service = new Swiper(".p-slider-service", {
+		speed: 400,
+		loop: true,
+		shortSwipes: false,
+		// navigation: {
+		// 	nextEl: ".p-slider-service__nav-next",
+		// 	prevEl: ".p-slider-service__nav-prev",
+		// },
+	});
+	$(".p-slider-service__nav-next").click(function () {
+		service.slideNext();
+	});
+	$(".p-slider-service__nav-prev").click(function () {
+		service.slidePrev();
+	});
+	$("[data-serviceslide]").click(function () {
+		let slide = $(this).data("serviceslide");
+		service.slideTo(slide);
+		$("#popup-service").fadeIn();
+		$("html").addClass("_no-scroll");
+	});
+	const tours = new Swiper(".p-slider-tour", {
+		speed: 400,
+		loop: true,
+		shortSwipes: false,
+		// navigation: {
+		// 	nextEl: ".p-slider-service__nav-next",
+		// 	prevEl: ".p-slider-service__nav-prev",
+		// },
+	});
+	$(".p-slider-tour__nav-next").click(function () {
+		tours.slideNext();
+	});
+	$(".p-slider-tour__nav-prev").click(function () {
+		sertoursice.slidePrev();
+	});
+	$("[data-tourslide]").click(function () {
+		let slide = $(this).data("tourslide");
+		tours.slideTo(slide);
+		$("#popup-tours").fadeIn();
+		$("html").addClass("_no-scroll");
+	});
+
+	$(".popup-sl__close").click(function () {
+		$(this).closest(".popup-sl").fadeOut();
+		$("html").removeClass("_no-scroll");
 	});
 });
 
@@ -855,55 +943,5 @@ $(function () {
 			}, 730);
 		}
 		return false;
-	});
-});
-
-$(function () {
-	const service = new Swiper(".p-slider-service", {
-		speed: 400,
-		loop: true,
-		shortSwipes: false,
-		// navigation: {
-		// 	nextEl: ".p-slider-service__nav-next",
-		// 	prevEl: ".p-slider-service__nav-prev",
-		// },
-	});
-	$(".p-slider-service__nav-next").click(function () {
-		service.slideNext();
-	});
-	$(".p-slider-service__nav-prev").click(function () {
-		service.slidePrev();
-	});
-	$("[data-serviceslide]").click(function () {
-		let slide = $(this).data("serviceslide");
-		service.slideTo(slide);
-		$("#popup-service").fadeIn();
-		$("html").addClass("_no-scroll");
-	});
-	const tours = new Swiper(".p-slider-tour", {
-		speed: 400,
-		loop: true,
-		shortSwipes: false,
-		// navigation: {
-		// 	nextEl: ".p-slider-service__nav-next",
-		// 	prevEl: ".p-slider-service__nav-prev",
-		// },
-	});
-	$(".p-slider-tour__nav-next").click(function () {
-		tours.slideNext();
-	});
-	$(".p-slider-tour__nav-prev").click(function () {
-		sertoursice.slidePrev();
-	});
-	$("[data-tourslide]").click(function () {
-		let slide = $(this).data("tourslide");
-		tours.slideTo(slide);
-		$("#popup-tours").fadeIn();
-		$("html").addClass("_no-scroll");
-	});
-
-	$(".popup-sl__close").click(function () {
-		$(this).closest(".popup-sl").fadeOut();
-		$("html").removeClass("_no-scroll");
 	});
 });
