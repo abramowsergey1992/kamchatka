@@ -315,3 +315,15 @@
 .habbit-card__slide .habbit-card__attr {
 	margin-bottom: auto;
 }
+
+
+#habbit-img-swiper {
+	width: 100%;
+}
+
+@media (min-width:890px) and (max-width:1100px) {
+	#habbit-img-swiper img {
+		position: relative;
+		max-height: calc(100vw / 2);
+	}
+}
