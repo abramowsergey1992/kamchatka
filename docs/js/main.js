@@ -1,4 +1,95 @@
 $(function () {
+	if ($(".aboutp").length) {
+		$(".aboutp__down").click(function () {
+			$("html, body").animate(
+				{ scrollTop: $(".whitebox").offset().top - 60 },
+				700
+			);
+		});
+		const swiper = new Swiper($(".about-full-slider")[0], {
+			loop: true,
+			spaceBetween: 15,
+			effect: "fade",
+
+			centeredSlides: true,
+			slidesPerView: "auto",
+			loopedSlides: 0,
+			navigation: {
+				nextEl: $(".about-full-slider__nav-next")[0],
+				prevEl: $(".about-full-slider__nav-prev")[0],
+			},
+			on: {
+				init: function (swiper) {
+					$(".about-full-slider__pagi").html(
+						`<span>${String(this.realIndex + 1).padStart(
+							2,
+							"0"
+						)}</span><span></span><span>${String(
+							this.slides.length
+						).padStart(2, "0")}</span>`
+					);
+				},
+				slideChange: function () {
+					$(".about-full-slider__pagi").html(
+						`<span>${String(this.realIndex + 1).padStart(
+							2,
+							"0"
+						)}</span><span></span><span>${String(
+							this.slides.length
+						).padStart(2, "0")}</span>`
+					);
+				},
+			},
+		});
+
+		const aboutPhotos = new Swiper($(".about-photos")[0], {
+			loop: true,
+			spaceBetween: 15,
+			preventClicks: false,
+			preventClicksPropagation: false,
+			centeredSlides: true,
+			slidesPerView: "auto",
+			loopedSlides: 10,
+			navigation: {
+				nextEl: $(".about-photos__gallery-next")[0],
+				prevEl: $(".about-photos__gallery-prev")[0],
+			},
+		});
+		// const aboutText1Slider = new Swiper($(".about-text-1__slider")[0], {
+		// 	loop: true,
+		// 	autoplay: {
+		// 		delay: 5000,
+		// 	},
+		// 	speed: 1000,
+		// 	on: {
+		// 		init: function (swiper) {
+		// 			$(".about-text-1__slider-pagi").html(
+		// 				`<span>${String(this.realIndex + 1).padStart(
+		// 					2,
+		// 					"0"
+		// 				)}</span><span></span><span>${String(
+		// 					this.slides.length
+		// 				).padStart(2, "0")}</span>`
+		// 			);
+		// 		},
+		// 		slideChange: function () {
+		// 			$(".about-text-1__slider-pagi").html(
+		// 				`<span>${String(this.realIndex + 1).padStart(
+		// 					2,
+		// 					"0"
+		// 				)}</span><span></span><span>${String(
+		// 					this.slides.length
+		// 				).padStart(2, "0")}</span>`
+		// 			);
+		// 		},
+		// 	},
+		// });
+	}
+});
+
+$(function () {});
+
+$(function () {
 	ymaps.ready(function () {
 		createMap1();
 	});
@@ -102,8 +193,6 @@ $(function () {
 	}
 });
 
-$(function () {});
-
 $(function () {
 	$(".restaurant-top__down").click(function () {
 		$("html, body").animate(
@@ -142,6 +231,25 @@ $(function () {
 	}
 });
 
+$(function () {
+	$(".rooms__filter").click(function () {
+		$(".rooms__filter").removeClass("_active");
+		$(this).addClass("_active");
+		let f = $(this).data("filter");
+		if (f == "all") {
+			$(".room").stop().slideDown();
+		} else {
+			$(".room").each(function () {
+				if (f == $(this).data("filter")) {
+					$(this).stop().slideDown();
+				} else {
+					$(this).stop().slideUp();
+				}
+			});
+		}
+	});
+});
+
 Fancybox.bind("[data-fancybox]", {});
 
 $(function () {
@@ -165,116 +273,8 @@ $(function () {
 	}
 });
 
-$(function () {
-	$(".rooms__filter").click(function () {
-		$(".rooms__filter").removeClass("_active");
-		$(this).addClass("_active");
-		let f = $(this).data("filter");
-		if (f == "all") {
-			$(".room").stop().slideDown();
-		} else {
-			$(".room").each(function () {
-				if (f == $(this).data("filter")) {
-					$(this).stop().slideDown();
-				} else {
-					$(this).stop().slideUp();
-				}
-			});
-		}
-	});
-});
-
 $(function(){})
 $(function(){})
-$(function () {
-	if ($(".aboutp").length) {
-		$(".aboutp__down").click(function () {
-			$("html, body").animate(
-				{ scrollTop: $(".whitebox").offset().top - 60 },
-				700
-			);
-		});
-		const swiper = new Swiper($(".about-full-slider")[0], {
-			loop: true,
-			spaceBetween: 15,
-			effect: "fade",
-
-			centeredSlides: true,
-			slidesPerView: "auto",
-			loopedSlides: 0,
-			navigation: {
-				nextEl: $(".about-full-slider__nav-next")[0],
-				prevEl: $(".about-full-slider__nav-prev")[0],
-			},
-			on: {
-				init: function (swiper) {
-					$(".about-full-slider__pagi").html(
-						`<span>${String(this.realIndex + 1).padStart(
-							2,
-							"0"
-						)}</span><span></span><span>${String(
-							this.slides.length
-						).padStart(2, "0")}</span>`
-					);
-				},
-				slideChange: function () {
-					$(".about-full-slider__pagi").html(
-						`<span>${String(this.realIndex + 1).padStart(
-							2,
-							"0"
-						)}</span><span></span><span>${String(
-							this.slides.length
-						).padStart(2, "0")}</span>`
-					);
-				},
-			},
-		});
-
-		const aboutPhotos = new Swiper($(".about-photos")[0], {
-			loop: true,
-			spaceBetween: 15,
-			preventClicks: false,
-			preventClicksPropagation: false,
-			centeredSlides: true,
-			slidesPerView: "auto",
-			loopedSlides: 10,
-			navigation: {
-				nextEl: $(".about-photos__gallery-next")[0],
-				prevEl: $(".about-photos__gallery-prev")[0],
-			},
-		});
-		// const aboutText1Slider = new Swiper($(".about-text-1__slider")[0], {
-		// 	loop: true,
-		// 	autoplay: {
-		// 		delay: 5000,
-		// 	},
-		// 	speed: 1000,
-		// 	on: {
-		// 		init: function (swiper) {
-		// 			$(".about-text-1__slider-pagi").html(
-		// 				`<span>${String(this.realIndex + 1).padStart(
-		// 					2,
-		// 					"0"
-		// 				)}</span><span></span><span>${String(
-		// 					this.slides.length
-		// 				).padStart(2, "0")}</span>`
-		// 			);
-		// 		},
-		// 		slideChange: function () {
-		// 			$(".about-text-1__slider-pagi").html(
-		// 				`<span>${String(this.realIndex + 1).padStart(
-		// 					2,
-		// 					"0"
-		// 				)}</span><span></span><span>${String(
-		// 					this.slides.length
-		// 				).padStart(2, "0")}</span>`
-		// 			);
-		// 		},
-		// 	},
-		// });
-	}
-});
-
 
 class Navigation {
 	static nav = document.getElementById("nav");
@@ -744,25 +744,25 @@ if (document.querySelector(".front-page")) {
 		},
 	});
 
-	beringSwiper.on("slideNextTransitionEnd", function () {
-		const slide = this.slides[0];
-		slide.classList.add("invisible");
-		this.removeSlide(0);
-		this.appendSlide(slide);
-		setTimeout(() => {
-			this.slides.at(-1).classList.remove("invisible");
-		}, 30);
-	});
-	beringSwiper.on("slidePrevTransitionEnd", function () {
-		const ind = this.slides.length - 1;
-		const slide = this.slides[ind];
-		slide.classList.add("invisible");
-		this.removeSlide(ind);
-		this.prependSlide(slide);
-		setTimeout(() => {
-			this.slides.at(0).classList.remove("invisible");
-		}, 30);
-	});
+	// beringSwiper.on("slideNextTransitionEnd", function () {
+	// 	const slide = this.slides[0];
+	// 	slide.classList.add("invisible");
+	// 	this.removeSlide(0);
+	// 	this.appendSlide(slide);
+	// 	setTimeout(() => {
+	// 		this.slides.at(-1).classList.remove("invisible");
+	// 	}, 30);
+	// });
+	// beringSwiper.on("slidePrevTransitionEnd", function () {
+	// 	const ind = this.slides.length - 1;
+	// 	const slide = this.slides[ind];
+	// 	slide.classList.add("invisible");
+	// 	this.removeSlide(ind);
+	// 	this.prependSlide(slide);
+	// 	setTimeout(() => {
+	// 		this.slides.at(0).classList.remove("invisible");
+	// 	}, 30);
+	// });
 	//#endregion
 
 	//#region services
@@ -809,6 +809,7 @@ if (document.querySelector(".front-page")) {
 	const toursCardSwiper = new Swiper("#tours-card-swiper", {
 		speed: 1000,
 		slidesPerGroup: 1,
+		preventClicksPropagation: false,
 		slidesPerView: "auto",
 		spaceBetween: 16,
 		navigation: {
@@ -817,25 +818,25 @@ if (document.querySelector(".front-page")) {
 		},
 	});
 
-	new ScrollMagic.Scene({
-		duration: 500,
-		triggerElement: "#tours",
-	})
-		.setTween(
-			new TimelineMax()
-				.add(
-					TweenMax.to("#tours-title", {
-						opacity: 1,
-						top: -74,
-					})
-				)
-				.add(
-					TweenMax.to("#tours-grandtext", {
-						opacity: 1,
-					})
-				)
-		)
-		.addTo(controller);
+	// new ScrollMagic.Scene({
+	// 	duration: 500,
+	// 	triggerElement: "#tours",
+	// })
+	// 	.setTween(
+	// 		new TimelineMax()
+	// 			.add(
+	// 				TweenMax.to("#tours-title", {
+	// 					opacity: 1,
+	// 					top: -74,
+	// 				})
+	// 			)
+	// 			.add(
+	// 				TweenMax.to("#tours-grandtext", {
+	// 					opacity: 1,
+	// 				})
+	// 			)
+	// 	)
+	// 	.addTo(controller);
 	//#endregion
 }
 $(function () {
@@ -870,29 +871,6 @@ $(function () {
 			}, 730);
 		}
 		return false;
-	});
-});
-
-$(function () {
-	AOS.init({
-		// Global settings:
-		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-		startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-		initClassName: "aos-init", // class applied after initialization
-		animatedClassName: "aos-animate", // class applied on animation
-		useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-		disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-		debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-		throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-		offset: 120, // offset (in px) from the original trigger point
-		delay: 0, // values from 0 to 3000, with step 50ms
-		duration: 1000, // values from 0 to 3000, with step 50ms
-		easing: "ease", // default easing for AOS animations
-		once: true, // whether animation should happen only once - while scrolling down
-		mirror: false, // whether elements should animate out while scrolling past them
-		anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 	});
 });
 
@@ -969,5 +947,28 @@ $(function () {
 	$(".popup-sl__close").click(function () {
 		$(this).closest(".popup-sl").fadeOut();
 		$("html").removeClass("_no-scroll");
+	});
+});
+
+$(function () {
+	AOS.init({
+		// Global settings:
+		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+		startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+		initClassName: "aos-init", // class applied after initialization
+		animatedClassName: "aos-animate", // class applied on animation
+		useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+		disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+		debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+		throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+		offset: 120, // offset (in px) from the original trigger point
+		delay: 0, // values from 0 to 3000, with step 50ms
+		duration: 1000, // values from 0 to 3000, with step 50ms
+		easing: "ease", // default easing for AOS animations
+		once: true, // whether animation should happen only once - while scrolling down
+		mirror: false, // whether elements should animate out while scrolling past them
+		anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 	});
 });

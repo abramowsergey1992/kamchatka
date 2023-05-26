@@ -335,3 +335,31 @@
 		max-height: calc(100vw / 2);
 	}
 }
+
+#services-thumb-swiper .timer {
+	opacity: 0 !important;
+}
+
+#services-thumb-swiper .swiper-slide-thumb-active .timer {
+	opacity: 1 !important;
+}
+
+.bering__button {
+	display: inline-block;
+}
+
+.tours__title {
+	transform: translateY(-50%);
+}
+
+@media(max-width:992px) {
+
+	.services,
+	.bering {
+		margin-top: 100px;
+	}
+
+	.services {
+		padding-bottom: 100px;
+	}
+}

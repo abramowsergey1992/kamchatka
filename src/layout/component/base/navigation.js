@@ -466,25 +466,25 @@ if (document.querySelector(".front-page")) {
 		},
 	});
 
-	beringSwiper.on("slideNextTransitionEnd", function () {
-		const slide = this.slides[0];
-		slide.classList.add("invisible");
-		this.removeSlide(0);
-		this.appendSlide(slide);
-		setTimeout(() => {
-			this.slides.at(-1).classList.remove("invisible");
-		}, 30);
-	});
-	beringSwiper.on("slidePrevTransitionEnd", function () {
-		const ind = this.slides.length - 1;
-		const slide = this.slides[ind];
-		slide.classList.add("invisible");
-		this.removeSlide(ind);
-		this.prependSlide(slide);
-		setTimeout(() => {
-			this.slides.at(0).classList.remove("invisible");
-		}, 30);
-	});
+	// beringSwiper.on("slideNextTransitionEnd", function () {
+	// 	const slide = this.slides[0];
+	// 	slide.classList.add("invisible");
+	// 	this.removeSlide(0);
+	// 	this.appendSlide(slide);
+	// 	setTimeout(() => {
+	// 		this.slides.at(-1).classList.remove("invisible");
+	// 	}, 30);
+	// });
+	// beringSwiper.on("slidePrevTransitionEnd", function () {
+	// 	const ind = this.slides.length - 1;
+	// 	const slide = this.slides[ind];
+	// 	slide.classList.add("invisible");
+	// 	this.removeSlide(ind);
+	// 	this.prependSlide(slide);
+	// 	setTimeout(() => {
+	// 		this.slides.at(0).classList.remove("invisible");
+	// 	}, 30);
+	// });
 	//#endregion
 
 	//#region services
@@ -531,6 +531,7 @@ if (document.querySelector(".front-page")) {
 	const toursCardSwiper = new Swiper("#tours-card-swiper", {
 		speed: 1000,
 		slidesPerGroup: 1,
+		preventClicksPropagation: false,
 		slidesPerView: "auto",
 		spaceBetween: 16,
 		navigation: {
@@ -539,25 +540,25 @@ if (document.querySelector(".front-page")) {
 		},
 	});
 
-	new ScrollMagic.Scene({
-		duration: 500,
-		triggerElement: "#tours",
-	})
-		.setTween(
-			new TimelineMax()
-				.add(
-					TweenMax.to("#tours-title", {
-						opacity: 1,
-						top: -74,
-					})
-				)
-				.add(
-					TweenMax.to("#tours-grandtext", {
-						opacity: 1,
-					})
-				)
-		)
-		.addTo(controller);
+	// new ScrollMagic.Scene({
+	// 	duration: 500,
+	// 	triggerElement: "#tours",
+	// })
+	// 	.setTween(
+	// 		new TimelineMax()
+	// 			.add(
+	// 				TweenMax.to("#tours-title", {
+	// 					opacity: 1,
+	// 					top: -74,
+	// 				})
+	// 			)
+	// 			.add(
+	// 				TweenMax.to("#tours-grandtext", {
+	// 					opacity: 1,
+	// 				})
+	// 			)
+	// 	)
+	// 	.addTo(controller);
 	//#endregion
 }
 $(function () {
