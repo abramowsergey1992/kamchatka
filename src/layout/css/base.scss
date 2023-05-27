@@ -1910,3 +1910,18 @@ html._no-scroll {
 		overflow: hidden;
 	}
 }
+
+.tour-card {
+	cursor: pointer;
+}
+
+.tour-card__filter-bg {
+	transition: transform 0.5s;
+	transform: scale(1) !important;
+
+	.tour-card:hover & {}
+}
+
+.swiper-slide:hover .tour-card__filter-bg {
+	transform: scale(1.1) !important;
+}

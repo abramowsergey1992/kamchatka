@@ -87,8 +87,6 @@ $(function () {
 	}
 });
 
-$(function () {});
-
 $(function () {
 	ymaps.ready(function () {
 		createMap1();
@@ -193,6 +191,8 @@ $(function () {
 	}
 });
 
+$(function () {});
+
 $(function () {
 	$(".restaurant-top__down").click(function () {
 		$("html, body").animate(
@@ -231,25 +231,6 @@ $(function () {
 	}
 });
 
-$(function () {
-	$(".rooms__filter").click(function () {
-		$(".rooms__filter").removeClass("_active");
-		$(this).addClass("_active");
-		let f = $(this).data("filter");
-		if (f == "all") {
-			$(".room").stop().slideDown();
-		} else {
-			$(".room").each(function () {
-				if (f == $(this).data("filter")) {
-					$(this).stop().slideDown();
-				} else {
-					$(this).stop().slideUp();
-				}
-			});
-		}
-	});
-});
-
 Fancybox.bind("[data-fancybox]", {});
 
 $(function () {
@@ -275,6 +256,25 @@ $(function () {
 
 $(function(){})
 $(function(){})
+$(function () {
+	$(".rooms__filter").click(function () {
+		$(".rooms__filter").removeClass("_active");
+		$(this).addClass("_active");
+		let f = $(this).data("filter");
+		if (f == "all") {
+			$(".room").stop().slideDown();
+		} else {
+			$(".room").each(function () {
+				if (f == $(this).data("filter")) {
+					$(this).stop().slideDown();
+				} else {
+					$(this).stop().slideUp();
+				}
+			});
+		}
+	});
+});
+
 
 class Navigation {
 	static nav = document.getElementById("nav");
@@ -875,6 +875,29 @@ $(function () {
 });
 
 $(function () {
+	AOS.init({
+		// Global settings:
+		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+		startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+		initClassName: "aos-init", // class applied after initialization
+		animatedClassName: "aos-animate", // class applied on animation
+		useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+		disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+		debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+		throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+		offset: 120, // offset (in px) from the original trigger point
+		delay: 0, // values from 0 to 3000, with step 50ms
+		duration: 1000, // values from 0 to 3000, with step 50ms
+		easing: "ease", // default easing for AOS animations
+		once: true, // whether animation should happen only once - while scrolling down
+		mirror: false, // whether elements should animate out while scrolling past them
+		anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+	});
+});
+
+$(function () {
 	$(".p-slider-tour__swiper").each(function () {
 		const tour = new Swiper(this, {
 			speed: 400,
@@ -947,28 +970,5 @@ $(function () {
 	$(".popup-sl__close").click(function () {
 		$(this).closest(".popup-sl").fadeOut();
 		$("html").removeClass("_no-scroll");
-	});
-});
-
-$(function () {
-	AOS.init({
-		// Global settings:
-		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-		startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-		initClassName: "aos-init", // class applied after initialization
-		animatedClassName: "aos-animate", // class applied on animation
-		useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-		disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-		debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-		throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-		offset: 120, // offset (in px) from the original trigger point
-		delay: 0, // values from 0 to 3000, with step 50ms
-		duration: 1000, // values from 0 to 3000, with step 50ms
-		easing: "ease", // default easing for AOS animations
-		once: true, // whether animation should happen only once - while scrolling down
-		mirror: false, // whether elements should animate out while scrolling past them
-		anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 	});
 });
