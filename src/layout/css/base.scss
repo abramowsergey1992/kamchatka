@@ -1487,7 +1487,9 @@ a {
 @media (max-width: 1350px) {
 
 
-
+	#services-img-swiper {
+		border-radius: 20px 0 0 0;
+	}
 
 	.intro__swiper-status {
 		right: auto;
@@ -1507,8 +1509,39 @@ a {
 		padding-top: 0px;
 	}
 
+	.services {
+		background: linear-gradient(0deg, #fff 67%, transparent 67%);
+	}
+
+	.service hr {
+		margin-left: 0 !important;
+		border: 0 solid !important;
+		height: 2px;
+		background: linear-gradient(136.07deg, #284C5B 0%, #051317 107.04%) !important;
+	}
+
+	.service__button {
+		color: #051317;
+		border-color: #051317;
+		margin-top: 30px;
+	}
+
+	#services-img-swiper {
+		margin-right: auto;
+	}
+
+	#services-info-swiper {
+		margin-left: 0 !important;
+		margin-right: auto !important;
+
+		.swiper-slide {
+			color: #051317;
+			text-align: left;
+		}
+	}
+
 	.services__swipers-wrap {
-		flex-direction: column-reverse;
+		flex-direction: column;
 		align-items: center;
 	}
 

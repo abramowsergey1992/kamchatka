@@ -521,7 +521,21 @@ if (document.querySelector(".front-page")) {
 				slidePrevTransitionStart: function () {
 					servicesInfoSwiper.slideTo(this.realIndex);
 				},
+				slideChange: function (swiper) {
+					$(".services-thumb-scroll__it").removeClass("_active");
+					$(".services-thumb-scroll__it")
+						.eq(swiper.activeIndex - 1)
+						.addClass("_active");
+					console.log("axx");
+				},
 			},
+		});
+		setTimeout(function () {
+			$(".services-thumb-scroll__it").eq(0).addClass("_active");
+		}, 100);
+		$(".services-thumb-scroll__it").eq(0).addClass("_active");
+		$(".services-thumb-scroll__it").click(function () {
+			servicesImgSwiper.slideTo($(this).index() + 1);
 		});
 		servicesImgSwiper.slideNext();
 	}
