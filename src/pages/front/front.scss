@@ -340,6 +340,21 @@
 	opacity: 0 !important;
 }
 
+#services-thumb-swiper .swiper-slide:not(.swiper-slide-thumb-active) .filter {
+	opacity: 0;
+}
+
+#services-thumb-swiper .swiper-slide:not(.swiper-slide-thumb-active) {
+	background: #Fff !important;
+	color: #000;
+}
+
+#services-thumb-swiper .swiper-slide p {
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 #services-thumb-swiper .swiper-slide-thumb-active .timer {
 	opacity: 1 !important;
 }
