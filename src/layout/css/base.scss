@@ -1486,6 +1486,9 @@ a {
 
 @media (max-width: 1350px) {
 
+	#services-img-swiper .swiper-slide {
+		aspect-ratio: 4/3;
+	}
 
 	#services-img-swiper {
 		border-radius: 20px 0 0 0;

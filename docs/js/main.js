@@ -1,3 +1,4 @@
+$(function(){})
 $(function () {
 	if ($(".aboutp").length) {
 		$(".aboutp__down").click(function () {
