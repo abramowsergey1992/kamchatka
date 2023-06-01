@@ -21,12 +21,38 @@ $(function () {
 		});
 	}
 	if ($(".restaurant-menu__slider").length) {
+		let lngth = $(".restaurant-menu__slider").find(".swiper-slide").length;
 		let menu = new Swiper(".restaurant-menu__slider", {
 			speed: 400,
+			loop: true,
 			spaceBetween: 100,
 			slidesPerView: 1,
 			mousewheel: {
 				forceToAxis: true,
+			},
+			on: {
+				init: function (swiper) {
+					$(".restaurant-menu__pagi").html(
+						`<span>${String(this.realIndex + 1).padStart(
+							2,
+							"0"
+						)}</span><span></span><span>${String(lngth).padStart(
+							2,
+							"0"
+						)}</span>`
+					);
+				},
+				slideChange: function () {
+					$(".restaurant-menu__pagi").html(
+						`<span>${String(this.realIndex + 1).padStart(
+							2,
+							"0"
+						)}</span><span></span><span>${String(lngth).padStart(
+							2,
+							"0"
+						)}</span>`
+					);
+				},
 			},
 			navigation: {
 				nextEl: ".restaurant-menu__nav-next",
