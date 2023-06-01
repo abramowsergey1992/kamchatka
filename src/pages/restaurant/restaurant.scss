@@ -327,6 +327,8 @@
 		text-transform: uppercase;
 		max-width: 551px;
 		margin-left: auto;
+		position: relative;
+		z-index: 9;
 	}
 
 	&__logo {
