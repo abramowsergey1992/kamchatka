@@ -1,4 +1,14 @@
 $(function () {
+	let i = 1;
+	$(".p-slider-service>.swiper-wrapper>.swiper-slide").each(function () {
+		$(this).attr("data-slide", i);
+		i++;
+	});
+	i = 1;
+	$(".p-slider-tour>.swiper-wrapper>.swiper-slide").each(function () {
+		$(this).attr("data-slide", i);
+		i++;
+	});
 	$(".p-slider-tour__swiper").each(function () {
 		const tour = new Swiper(this, {
 			speed: 400,
@@ -72,4 +82,21 @@ $(function () {
 		$(this).closest(".popup-sl").fadeOut();
 		$("html").removeClass("_no-scroll");
 	});
+	if ($(location.hash).closest(".popup-sl")) {
+		if (
+			$(location.hash).closest(".popup-sl").attr("id") == "popup-service"
+		) {
+			let slide = $(location.hash).attr("data-slide");
+			console.log("slide", slide);
+			service.slideTo(slide);
+			$("#popup-service").fadeIn();
+			$("html").addClass("_no-scroll");
+		}
+		if ($(location.hash).closest(".popup-sl").attr("id") == "popup-tours") {
+			let slide = $(location.hash).attr("data-slide");
+			tours.slideTo(slide);
+			$("#popup-tours").fadeIn();
+			$("html").addClass("_no-scroll");
+		}
+	}
 });
