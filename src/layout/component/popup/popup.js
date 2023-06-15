@@ -52,9 +52,14 @@ $(function () {
 		service.slideTo(slide);
 		$("#popup-service").fadeIn();
 		$("html").addClass("_no-scroll");
+		setTimeout(function () {
+			location.hash = $(
+				".p-slider-service>.swiper-wrapper>.swiper-slide.swiper-slide-active"
+			).attr("id");
+		}, 100);
 	});
 	const tours = new Swiper(".p-slider-tour", {
-		speed: 400,
+		speed: 20,
 		loop: true,
 		preventClicks: true,
 		preventClicksPropagation: true,
@@ -76,11 +81,17 @@ $(function () {
 		tours.slideTo(slide);
 		$("#popup-tours").fadeIn();
 		$("html").addClass("_no-scroll");
+		setTimeout(function () {
+			location.hash = $(
+				".p-slider-tour>.swiper-wrapper>.swiper-slide.swiper-slide-active"
+			).attr("id");
+		}, 100);
 	});
 
 	$(".popup-sl__close").click(function () {
 		$(this).closest(".popup-sl").fadeOut();
 		$("html").removeClass("_no-scroll");
+		location.hash = "";
 	});
 	if ($(location.hash).closest(".popup-sl")) {
 		if (
